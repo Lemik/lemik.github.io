@@ -1,0 +1,59 @@
+body{
+	font-family: 'Open Sans','sans-serif';
+     /*padding-top:80px;*/
+}
+.navbar{
+	margin-bottom: 0px;
+	padding: 20px 10px;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+@media(max-width: 150px){
+	.navbar-header{
+		position: relative;
+	}
+	.navbar img{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		width: 50%;
+	}
+}
+
+.navbar-inverse .navbar-nav>li>a{
+	color:#bbb;
+}
+.cbp-af-header-shrink{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	opacity: 0.8;
+}
+/*background Image*/
+.fill-screen {
+	background-size: cover;
+	background-position: center;
+}
+.content-filler{
+	min-height: 350px;
+}
+.fixed-attachment{
+	background-attachment: fixed;
+}
+
+/*Image*/
+/*all images need to be 1200 pixels i*/
+@media(min-width: 1200px){
+	.img-responsive{
+		margin: 0px auto;
+	}
+}
+
+
+
+footer{
+	background-color: #333;
+	color: #ddd;
+	padding: 20px;
+	text-align: center;
+}
