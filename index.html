@@ -8,51 +8,58 @@
 	<link rel="stylesheet" href="css/app.css" />
 </head>
 <body>
-	<header >
-<nav class="navbar navbar-inverse navbar-fixed-top cbp-af-header">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="#top"> <img src="images/LD.png"></a>
-    </div>
+<header >
+    <nav class="navbar navbar-inverse navbar-fixed-top cbp-af-header" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#top">
+    <img  src="images/LD.png">
+          </a>
+        </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">    
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#photo">Photo</a></li>
-        <li><a href="#projects">Project</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contacts">Contacts</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-	</header>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">    
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#photo">Photo</a></li>
+            <li><a href="#projects">Project</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+</header>
+
 <div class="container-fluid">
-	<div class="row">
-      
-	<section class="col-sm-9 col-md-8 col-sm-push-3 col-md-push-2">
-	colum 2
-	</section>
-	<aside class="col-sm-3 col-md-2 col-sm-pull-9 col-md-pull-8">
-	colum 1
-    </aside>
-	<aside class="col-sm-12 col-md-2">
-	colum 3
-	</aside>
-	</div>
+      <div class="row">
+        <div class="fill-screen" style="background-image: url(images/1200x600.jpg)">
+        </div>
+      </div>
+      <div class="row content-filler" >
+<blockquote>
+  <p><H1>Sorry, Page is under construction </H1></p>
+
+</blockquote>
+      </div>
 </div>
-<footer class="container-fluid">FOOT</footer>
+
+<footer class="container-fluid"> © Leonid Dushin 1995-2016</footer>
 <script src="js/jquery/jquery.min.js"></script>
 <script src="js/bootstrap/bootstrap.min.js"></script>
 <script src="js/animatedheader/classie.js"></script>
 <script src="js/animatedheader/cbpAnimatedHeader.js"></script>
+<script>$(function () {
+  $(window).on("load resize", function () {
+    $(".fill-screen").css("height", window.innerHeight);
+  });
+});</script>
 </body>
 </html>
