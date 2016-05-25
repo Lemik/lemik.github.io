@@ -2,6 +2,27 @@ body{
 	font-family: 'Open Sans','sans-serif';
      /*padding-top:80px;*/
 }
+
+/*video
+html 
+body{
+	height: 100%;
+}
+
+header{
+	display: block;
+	position: relative;
+	width: auto;
+	height: auto;
+	padding: 100px 0;
+	min-height: 100%;
+	background: no-repeat center center;
+	background-attachment: scroll;
+	background-color: #222;
+	background-size: cover;
+}*/
+/*video end*/
+
 .navbar{
 	margin-bottom: 0px;
 	padding: 20px 10px;
@@ -37,8 +58,14 @@ body{
 .content-filler{
 	min-height: 350px;
 }
-.fixed-attachment{
+.fixed-attachment {
 	background-attachment: fixed;
+}
+/*this is fix for IOS6-8*/
+@media(max-width: 1024px){
+	.fixed-attachment { 
+		background-attachment: scroll;
+	}
 }
 
 /*Image*/
