@@ -8,16 +8,25 @@ layout: default
 			<div class="fill-screen" style="background-image: url({{  page.tumblr | site.baseurl}})"></div>
 		</div>
 	{% endif %}
-	   <div class="row content-filler" >
-			<header class="post-header">
+	
+	   <div class="row" >
+	   <blockquote>
 				<h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-				<p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-			</header>
+				<p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" 
+				                            itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}
+				                     </time>
+									 {% if page.author %} • 
+									 <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+											<span itemprop="name">{{ page.author }}
+											</span>
+									 </span>{% endif %}
+				</p>
+			</blockquote>
 		</div>
-  <div class="post-content" itemprop="articleBody">
+  <div class="row post-content" itemprop="articleBody">
   <blockquote>
     {{ content }}
-	</blockquote>
+  </blockquote>
   </div>
 </div>
 </article>
