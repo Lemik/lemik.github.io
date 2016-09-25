@@ -85,3 +85,8 @@ footer{
 	padding: 20px;
 	text-align: center;
 }
+.page{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
