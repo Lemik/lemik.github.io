@@ -1,0 +1,6 @@
+{% capture imagePath %}{{page.date | date: "%Y-%m-%d" }}-{{page.title | slugify }}/{{include.name}}{% endcapture %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="fill-screen fixed-attachment" style="background-image: url(/images/posts/{{imagePath}})"></div>
+  </div>
+</div>
