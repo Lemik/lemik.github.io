@@ -4,7 +4,7 @@ url post name : [categories]\file name.html
 folder structure : categories
 post name: file name [date + title]
 
-
+--------------------------------------------------------------------------------------------------------------------------------------
 categories:
 ru
 -Traveling
@@ -13,8 +13,9 @@ ru
 
 en
 
+Books
 
-
+---------------------------------------------------------------------------------------------------------------------------------
 
 
 image - {% include image.html name="name.jpg"
