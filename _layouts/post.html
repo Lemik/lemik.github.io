@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: defaultPost
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 	<div class="container-fluid">
@@ -8,14 +8,14 @@ layout: default
 			<div class="fill-screen" style="background-image: url({{  page.tumblr | site.baseurl}})"></div>
 		</div>
 	{% endif %}
-	
+
 	   <div class="row" >
 	   <blockquote>
 				<h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-				<p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" 
+				<p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}"
 				                            itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}
 				                     </time>
-									 {% if page.author %} • 
+									 {% if page.author %} •
 									 <span itemprop="author" itemscope itemtype="http://schema.org/Person">
 											<span itemprop="name">{{ page.author }}
 											</span>
@@ -27,6 +27,20 @@ layout: default
   <blockquote>
     {{ content }}
   </blockquote>
+<ul class="share-buttons">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&t={{ page.title }}" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="/images/social_flat_rounded_rects_svg/Facebook.svg"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source={{ site.url }}{{ page.url }}&text={{ page.title }}" target="_blank" title="Tweet"><img alt="Tweet" src="/images/social_flat_rounded_rects_svg/Twitter.svg"></a></li>
+  <li><a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" target="_blank" title="Share on Google+"><img alt="Share on Google+" src="/images/social_flat_rounded_rects_svg/Google+.svg"></a></li>
+  <li><a href="http://www.tumblr.com/share?v=3&u={{ site.url }}{{ page.url }}&s=" target="_blank" title="Post to Tumblr"><img alt="Post to Tumblr" src="/images/social_flat_rounded_rects_svg/Tumblr.svg"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&media={{ page.date }}-{{page.title}}\{{page.tham}}&description={{ page.title }}" target="_blank" title="Pin it"><img alt="Pin it" src="/images/social_flat_rounded_rects_svg/Pinterest.svg"></a></li>
+  <li><a href="https://getpocket.com/save?url={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank" title="Add to Pocket"><img alt="Add to Pocket" src="/images/social_flat_rounded_rects_svg/Pocket.svg"></a></li>
+  <li><a href="http://www.reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank" title="Submit to Reddit"><img alt="Submit to Reddit" src="/images/social_flat_rounded_rects_svg/Reddit.svg"></a></li>
+  <li><a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&summary={{ page.title }}&source={{ site.url }}{{ page.url }}" target="_blank" title="Share on LinkedIn"><img alt="Share on LinkedIn" src="/images/social_flat_rounded_rects_svg/LinkedIn.svg"></a></li>
+  <li><a href="http://wordpress.com/press-this.php?u={{ site.url }}{{ page.url }}&s={{ page.title }}&i={{ page.date }}-{{page.title}}\{{page.tham}}" target="_blank" title="Publish on WordPress"><img alt="Publish on WordPress" src="/images/social_flat_rounded_rects_svg/Wordpress.svg"></a></li>
+  <li><a href="https://pinboard.in/popup_login/?url={{ site.url }}{{ page.url }}&title={{ page.title }}&description={{ page.title }}" target="_blank" title="Save to Pinboard"><img alt="Save to Pinboard" src="/images/social_flat_rounded_rects_svg/Pinboard.svg"></a></li>
+  <li><a href="mailto:?subject={{ page.title }}&body={{ page.title }}:%20{{ site.url }}{{ page.url }}" target="_blank" title="Send email"><img alt="Send email" src="/images/social_flat_rounded_rects_svg/Email.svg"></a></li>
+</ul>
+
   </div>
 </div>
 </article>
