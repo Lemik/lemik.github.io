@@ -5,10 +5,9 @@ layout: defaultPost
 	<div class="container-fluid">
 	{%if page.tumblr%}
 		<div class="row">
-			<div class="fill-screen" style="background-image: url({{  page.tumblr | site.baseurl}})"></div>
+			<div class="fill-screen" style="background-image: url(/images/posts/{{page.date | date: "%Y-%m-%d" }}-{{page.title | slugify }}/{{page.tumblr}})"></div>
 		</div>
 	{% endif %}
-
 	   <div class="row" >
 	   <blockquote>
 				<h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
