@@ -8,11 +8,17 @@ layout: default
     {% for post in site.posts %}
     <el>
       <h2> <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+      {%if post.tumblr %}
+        {% capture imagePath %}{{post.date | date: "%Y-%m-%d" }}-{{post.title | slugify }}/{{post.tumblr}}{% endcapture %}
+        <img  class="img-responsive" src="/images/posts/{{imagePath}}"width="200"/>
+      {% endif %}
+
       <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
       <span class="post-meta">{% for categories in post.categories %}
                                 /<a href=""> {{ categories }}</a>
                                 {% endfor %}
       </span>
+          {{post.excerpt}}
       </el>
     {% endfor %}
   </ul>
