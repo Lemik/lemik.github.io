@@ -9,6 +9,10 @@
       </div>
     </div>
     {% include footerPage.html %}
+
+    {% if jekyll.environment == 'production' %}
+    {% include analytics.html %}
+    {% endif %}
  </body>
 
 </html>
