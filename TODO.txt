@@ -4,4 +4,5 @@ Shere button  https://superdevresources.com/share-buttons-jekyll
 
 
 - Add blog page version
-- 
+- Add Site map-( https://blog.webjeda.com/jekyll-sitemap/)
+- Add Comments https://blog.webjeda.com/jekyll-comments/ - http://dhodgkin.github.io/code/2013/08/19/on-fb-comments-and-jekyll/
