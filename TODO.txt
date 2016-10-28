@@ -4,4 +4,10 @@ Shere button  https://superdevresources.com/share-buttons-jekyll
 
 
 - Add blog page version
-- 
+- Add Site map-( https://blog.webjeda.com/jekyll-sitemap/)
+- Add Comments https://blog.webjeda.com/jekyll-comments/ - http://dhodgkin.github.io/code/2013/08/19/on-fb-comments-and-jekyll/
+- Add Subscribe https://blog.webjeda.com/jekyll-subscribe-form/
+- SEO https://blog.webjeda.com/optimize-jekyll-seo/
+
+http://cloudcannon.com/tips/2014/12/12/the-ultimate-list-of-services-for-static-websites.html
+https://blog.webjeda.com/jekyll-admin/
