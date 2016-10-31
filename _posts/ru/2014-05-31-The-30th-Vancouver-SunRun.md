@@ -3,7 +3,7 @@ layout: post
 title:  "The 30th Vancouver SunRun"
 date: 2014-05-31
 published: true
-image: /images/posts/2014-05-31-The-30th-Vancouver-SunRun/LEO_0221.jpg
+image: /images/posts/2014-05-31-the-30th-vancouver-sunrun/LEO_0221.jpg
 excerpt_separator: <!-- excerpt -->
 categories: ru running
 ---
