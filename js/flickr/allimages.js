@@ -24,10 +24,10 @@ $(function () {
       method: 'flickr.photosets.getPhotos',
       api_key: '04e30e9c7310d047c08abaceb6f51e93',
 	    user_id: '98045454@N07',
-      photoset_id: '72157674302383576'
-    //photoset_couple: '72157675929319545'
+          photoset_id: '72157674302383576'
+    //photoset_couple:   '72157675929319545'
     //photoset_portraits:'72157674751800490'
-    //photoset_la_femme:'72157639636238974'
+    //photoset_la_femme: '72157639636238974'
 
     //  photoset_id: '72157639636238974',
 	  // jshint ignore:line

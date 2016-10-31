@@ -10,7 +10,7 @@ layout: default
               <ul class="portfolio-group">
                   <!-- Portfolio Item -->
                   <li class="portfolio-item col-sm-4 col-xs-6 margin-bottom-40">
-                      <a href="#">
+                      <a href="portfolio/portraits.html">
                           <figure class="animate fadeInLeft">
                               <img alt="Portraits" src="images/portfolio/portraits.jpg">
                               <figcaption>
@@ -23,7 +23,7 @@ layout: default
                   <!-- //Portfolio Item// -->
                   <!-- Portfolio Item -->
                   <li class="portfolio-item col-sm-4 col-xs-6 margin-bottom-40">
-                      <a href="#">
+                      <a href="portfolio/couples.html">
                           <figure class="animate fadeIn">
                               <img alt="Couples" src="images/portfolio/couples.jpg">
                               <figcaption>
@@ -36,7 +36,7 @@ layout: default
                   <!-- //Portfolio Item// -->
                   <!-- Portfolio Item -->
                   <li class="portfolio-item col-sm-4 col-xs-6 margin-bottom-40">
-                      <a href="#">
+                      <a href="portfolio/la_femme.html">
                           <figure class="animate fadeInRight">
                               <img alt="image3" src="images/portfolio/girls.jpg">
                               <figcaption>
@@ -122,6 +122,10 @@ layout: default
 </div>
 <div>
     <div class="container col-md-12 portfolio-group no-padding">
+		<div class="blog-item-header">
+              <h2><a href="#">Previous posts</a></h2>
+        </div>
+	
         <!-- Portfolio Item -->
         {% for post in site.posts offset:1 limit:3 %}
         <div class="col-md-4 portfolio-item margin-bottom-40 code">

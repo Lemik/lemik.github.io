@@ -2,7 +2,7 @@
 layout: photo
 ---
 
-<div id="links"></div>
+<div  style="padding: 20px 0" id="links"></div>
 <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
 <div id="blueimp-gallery" class="blueimp-gallery">
     <!-- The container for the modal slides -->
@@ -44,8 +44,8 @@ layout: photo
 <!-- Bootstrap JS is not required, but included for the responsive demo navigation and button states -->
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
-<script src="js/bootstrap-image-gallery.js"></script>
-<script src="js/flickr/allimages.js"></script>
+<script src="{{ site.baseurl }}/js/bootstrap/bootstrap-image-gallery.js"></script>
+<script src="{{ site.baseurl }}/js/flickr/allimages.js"></script>
 
 {% if jekyll.environment == 'production' %}
 {% include analytics.html %}
