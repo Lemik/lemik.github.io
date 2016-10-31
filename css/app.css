@@ -42,7 +42,9 @@ header{
 		width: 50%;
 	}
 }
-
+.wrapper{
+	padding: 0px 30px;
+}
 .navbar-inverse .navbar-nav>li>a{
 	color:#bbb;
 }
@@ -53,8 +55,9 @@ header{
 }
 /*background Image*/
 .fill-screen {
-	background-size: cover;
+	background-size: contain;
 	background-position: center;
+	background-repeat: no-repeat;
 }
 .content-filler{
 	min-height: 350px;

@@ -1,18 +1,148 @@
 ---
 layout: default
 ---
-
-<div class="home">
-  <h1 class="page-heading">Posts</h1>
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-<!--TODO  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>-->
+  <div>
+      <div class="container  col-md-12 bottom-border">
+          <div class="blog-item-header">
+              <h2><a href="#">Photo Portfolio</a></h2>
+          </div>
+          <div class="row padding-top-40">
+              <ul class="portfolio-group">
+                  <!-- Portfolio Item -->
+                  <li class="portfolio-item col-sm-4 col-xs-6 margin-bottom-40">
+                      <a href="portfolio/portraits.html">
+                          <figure class="animate fadeInLeft">
+                              <img alt="Portraits" src="images/portfolio/portraits.jpg">
+                              <figcaption>
+                                  <h3>Portraits</h3>
+                                <!--  <span>Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui et everti tamquam suavitate mea.</span-->
+                              </figcaption>
+                          </figure>
+                      </a>
+                  </li>
+                  <!-- //Portfolio Item// -->
+                  <!-- Portfolio Item -->
+                  <li class="portfolio-item col-sm-4 col-xs-6 margin-bottom-40">
+                      <a href="portfolio/couples.html">
+                          <figure class="animate fadeIn">
+                              <img alt="Couples" src="images/portfolio/couples.jpg">
+                              <figcaption>
+                                  <h3>Couples</h3>
+                                  <!--span>Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui et everti tamquam suavitate mea.</span-->
+                              </figcaption>
+                          </figure>
+                      </a>
+                  </li>
+                  <!-- //Portfolio Item// -->
+                  <!-- Portfolio Item -->
+                  <li class="portfolio-item col-sm-4 col-xs-6 margin-bottom-40">
+                      <a href="portfolio/la_femme.html">
+                          <figure class="animate fadeInRight">
+                              <img alt="image3" src="images/portfolio/girls.jpg">
+                              <figcaption>
+                                  <h3>LA Femme</h3>
+                                  <!--span>Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui et everti tamquam suavitate mea.</span-->
+                              </figcaption>
+                          </figure>
+                      </a>
+                  </li>
+                  <!-- //Portfolio Item// -->
+              </ul>
+          </div>
+      </div>
+</div>
+<div>
+    <div class="container col-md-12 bottom-border">
+        <!-- Blog Post -->
+        {% for post in site.posts limit:1%}
+        <div class="blog-post padding-bottom-20">
+            <!-- Blog Item Header -->
+            <div class="blog-item-header">
+                <!-- Title -->
+                <h2>
+                <a href="{{ post.url | prepend: site.baseurl }}">
+                {{ post.title }}</a></h2>
+                <div class="clearfix"></div>
+                <!-- End Title -->
+                <!-- Date -->
+                <div class="blog-post-date">
+                    <a href="#">{{ post.date | date: '%d %B %Y'}}</a>
+                </div>
+                <!-- End Date -->
+            </div>
+            <!-- End Blog Item Header -->
+            <!-- Blog Item Details -->
+            <div class="blog-post-details">
+                <!-- Author Name
+                <div class="blog-post-details-item blog-post-details-item-left">
+                    <i class="fa fa-user color-gray-light"></i>
+                    <a href="#">Admin</a>
+                </div>
+                <!-- End Author Name -->
+                <!-- Tags -->
+                <div class="blog-post-details-item blog-post-details-item-left blog-post-details-tags">
+                    <!--i class="fa fa-tag color-gray-light"></i-->
+                    {% for categories in post.categories %}
+                        <a href="#">{{ categories }}</a>
+                    {% endfor %}
+                </div>
+                <!-- End Tags -->
+                <!-- # of Comments
+                <div class="blog-post-details-item blog-post-details-item-left blog-post-details-item-last">
+                    <a href="">
+                        <i class="fa fa-comments color-gray-light"></i> 2 Comments
+                    </a>
+                </div>
+                <!-- End # of Comments -->
+            </div>
+            <!-- End Blog Item Details -->
+            <!-- Blog Item Body -->
+            <div class="blog">
+                <div class="clearfix"></div>
+                <div class="blog-post-body row margin-top-15">
+                    <div class="col-md-5">
+                        <img class="margin-bottom-20" src="{{ post.image }}" alt="thumb1">
+                    </div>
+                    <div class="col-md-7">
+                        <p>{{ post.excerpt }}</p>
+                        <!-- Read More -->
+                        <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-primary">
+                                                Read More
+                                                <i class="icon-chevron-right readmore-icon"></i>
+                                            </a>
+                        <!-- End Read More -->
+                    </div>
+                </div>
+            </div>
+            <!-- End Blog Item Body -->
+        </div>
+        {%endfor%}
+        <!-- End Blog Item -->
+    </div>
+</div>
+<div>
+    <div class="container col-md-12 portfolio-group no-padding">
+		<div class="blog-item-header">
+              <h2><a href="#">Previous posts</a></h2>
+        </div>
+	
+        <!-- Portfolio Item -->
+        {% for post in site.posts offset:1 limit:3 %}
+        <div class="col-md-4 portfolio-item margin-bottom-40 code">
+            <div>
+                <a href="{{ post.url | prepend: site.baseurl }}">
+                    <figure>
+                        {%if post.image %}
+                        <img src="{{ post.image }}" alt="image1"> {%else%}
+                        <img src="images/2x200x400.jpg" alt="image1"> {%endif%}
+                        <figcaption>
+                            <h3 class="margin-top-20">{{ post.title }}</h3>
+                            <span>{{ post.description }}</span>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>

@@ -23,3 +23,5 @@ markdown: kramdown
 
 
 googleAnalitycsID: UA-58426023-1
+
+gem: [jekyll-admin]
