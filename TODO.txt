@@ -1,12 +1,17 @@
 Shere button  https://superdevresources.com/share-buttons-jekyll
 	      https://simplesharingbuttons.com/#preview
 
-
+- Add Header
+        <!-- Title -->
+        <title>Habitat - A Professional Bootstrap Template</title>
+        <!-- Meta -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 - Add blog page version
 - Add Site map-( https://blog.webjeda.com/jekyll-sitemap/)
-- Add Comments https://blog.webjeda.com/jekyll-comments/ - http://dhodgkin.github.io/code/2013/08/19/on-fb-comments-and-jekyll/
-- Add Subscribe https://blog.webjeda.com/jekyll-subscribe-form/
 - SEO https://blog.webjeda.com/optimize-jekyll-seo/
 
 http://cloudcannon.com/tips/2014/12/12/the-ultimate-list-of-services-for-static-websites.html
