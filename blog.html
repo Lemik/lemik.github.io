@@ -2,19 +2,72 @@
 layout: default
 ---
 
-<div class="home">
-  <h1 class="page-heading">Posts</h1>
-  <ul class="post-list">
-    {% for post in site.posts %}
-    <el>
-      <h2> <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-      <span class="post-meta">{% for categories in post.categories %}
-                                /<a href=""> {{ categories }}</a>
-                                {% endfor %}
-      </span>
-      </el>
-    {% endfor %}
-  </ul>
-<!--TODO  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>-->
-</div>
+<div class="container col-md-12">
+        <!-- Blog Post -->
+        {% for post in site.posts %}
+        <div class="blog-post padding-bottom-20">
+            <!-- Blog Item Header -->
+            <div class="blog-item-header">
+                <!-- Title -->
+                <h2>
+                <a href="{{ post.url | prepend: site.baseurl }}">
+                {{ post.title }}</a></h2>
+                <div class="clearfix"></div>
+                <!-- End Title -->
+                <!-- Date -->
+                <div class="blog-post-date">
+                    <a href="#">{{ post.date | date: '%d %B %Y'}}</a>
+                </div>
+                <!-- End Date -->
+            </div>
+            <!-- End Blog Item Header -->
+            <!-- Blog Item Details -->
+            <div class="blog-post-details">
+                <!-- Author Name
+                <div class="blog-post-details-item blog-post-details-item-left">
+                    <i class="fa fa-user color-gray-light"></i>
+                    <a href="#">Admin</a>
+                </div>
+                <!-- End Author Name -->
+                <!-- Tags -->
+                <div class="blog-post-details-item blog-post-details-item-left blog-post-details-tags">
+                    <!--i class="fa fa-tag color-gray-light"></i-->
+                    {% for categories in post.categories %}
+                        <a href="#">{{ categories }}</a>
+                    {% endfor %}
+                </div>
+                <!-- End Tags -->
+                <!-- # of Comments
+                <div class="blog-post-details-item blog-post-details-item-left blog-post-details-item-last">
+                    <a href="">
+                        <i class="fa fa-comments color-gray-light"></i> 2 Comments
+                    </a>
+                </div>
+                <!-- End # of Comments -->
+            </div>
+            <!-- End Blog Item Details -->
+            <!-- Blog Item Body -->
+            <div class="blog">
+                <div class="clearfix"></div>
+                <div class="blog-post-body row margin-top-15">
+                    <div class="col-md-5">
+					    {%if post.image %}
+                        <img class="margin-bottom-20" src="{{ post.image }}" alt="thumb1">{%else%}
+                        <img class="margin-bottom-20" src="images/2x200x400.jpg" alt="thumb1"> {%endif%}                        
+                    </div>
+                    <div class="col-md-7">
+                        <p>{{ post.excerpt }}</p>
+                        <!-- Read More -->
+                        <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-primary">
+                                                Read More
+                                                <i class="icon-chevron-right readmore-icon"></i>
+                                            </a>
+                        <!-- End Read More -->
+                    </div>
+                </div>
+            </div>
+            <!-- End Blog Item Body -->
+        </div>
+        {%endfor%}
+        <!-- End Blog Item -->
+    </div>
