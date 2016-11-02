@@ -5,6 +5,7 @@ date: 2014-05-31
 published: true
 image: /images/posts/2014-05-31-the-30th-vancouver-sunrun/LEO_0221.jpg
 excerpt_separator: <!-- excerpt -->
+comments: true
 categories: ru running
 ---
 

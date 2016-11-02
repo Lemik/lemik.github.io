@@ -5,6 +5,7 @@ title:  "Web Site Creation"
 date: 2016-10-10
 published: false
 excerpt_separator: <!-- excerpt -->
+comments: true
 categories: ru site
 ---
 
