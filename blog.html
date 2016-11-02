@@ -37,11 +37,12 @@ layout: default
                     {% endfor %}
                 </div>
                 <!-- End Tags -->
-                <!-- # of Comments
+                <!-- # of Comments-->
                 <div class="blog-post-details-item blog-post-details-item-left blog-post-details-item-last">
-                    <a href="">
-                        <i class="fa fa-comments color-gray-light"></i> 2 Comments
-                    </a>
+                    <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread">
+                        <i class="fa fa-comments color-gray-light"></i> 
+							<script id="dsq-count-scr" src="//dushyn.disqus.com/count.js" async></script>						
+						</a>
                 </div>
                 <!-- End # of Comments -->
             </div>

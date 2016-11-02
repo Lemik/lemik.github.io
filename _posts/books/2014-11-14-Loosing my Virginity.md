@@ -4,6 +4,7 @@ title:  "Richard Branson - Loosing my Virginity"
 date: 2016-10-03
 image: images/posts/2016-10-03-richard-branson-loosing-my-virginity/1.jpg
 excerpt_separator: <!-- excerpt -->
+comments: true
 categories: Books
 ---
 

@@ -4,6 +4,7 @@ version: 1
 title:  "Endless post"
 date: 2016-10-13
 published: false
+comments: true
 categories: ru
 ---
 
