@@ -9,16 +9,15 @@ layout: default2
 		</div>
 	{% endif %}
 	   <div class="row" >
-
 				<h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
 				<p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}"
 				                            itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}
 				                     </time>
-									 {% if page.author %} •
+							<!--		 {% if page.author %} •
 									 <span itemprop="author" itemscope itemtype="http://schema.org/Person">
 											<span itemprop="name">{{ page.author }}
 											</span>
-									 </span>{% endif %}
+									 </span>{% endif %}-->
 				</p>
 
 		</div>
@@ -27,5 +26,5 @@ layout: default2
   </div>
 </div>
 	{% include sharebuttons.html %}
-	{% include googlecomments.html %}
+	{% include comments.html %}
 </article>

@@ -1,5 +1,6 @@
 ---
 layout: post
+version: 1
 title:  "The 30th Vancouver SunRun"
 date: 2014-05-31
 published: true
