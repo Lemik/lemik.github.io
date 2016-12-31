@@ -33,15 +33,16 @@ layout: default
                 <div class="blog-post-details-item blog-post-details-item-left blog-post-details-tags">
                     <!--i class="fa fa-tag color-gray-light"></i-->
                     {% for categories in post.categories %}
-                        <a href="#">{{ categories }}</a>
+                        <a href="{{ site.baseurl }}/Arh-categories.html#{{categories| slugify}}">{{ categories | upcase }}</a>
+                        {% unless forloop.last %} | {% endunless %}
                     {% endfor %}
                 </div>
                 <!-- End Tags -->
                 <!-- # of Comments
                 <div class="blog-post-details-item blog-post-details-item-left blog-post-details-item-last">
                     <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread">
-                        <i class="fa fa-comments color-gray-light"></i> 
-							<script id="dsq-count-scr" src="//dushyn.disqus.com/count.js" async></script>						
+                        <i class="fa fa-comments color-gray-light"></i>
+							<script id="dsq-count-scr" src="//dushyn.disqus.com/count.js" async></script>
 						</a>
                 </div>
                 <!-- End # of Comments -->
@@ -54,7 +55,7 @@ layout: default
                     <div class="col-md-5">
 					    {%if post.image %}
                         <img class="margin-bottom-20" src="{{ post.image }}" alt="thumb1">{%else%}
-                        <img class="margin-bottom-20" src="images/2x200x400.jpg" alt="thumb1"> {%endif%}                        
+                        <img class="margin-bottom-20" src="images/2x200x400.jpg" alt="thumb1"> {%endif%}
                     </div>
                     <div class="col-md-7">
                         <p>{{ post.excerpt }}</p>
