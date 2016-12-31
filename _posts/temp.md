@@ -1,9 +1,9 @@
 ---
 layout: post
 version: 1
-title:  "ABC"
-date: 2012-06-12
-published: false
+title:  "Test Title"
+date: 2016-06-12
+published: true
 tumblr: LEO_1538.jpg
 image: /images/posts/2014-11-14-boeing/LEO_1538.jpg
 excerpt_separator: <!-- excerpt -->
@@ -23,3 +23,71 @@ categories: ru Traveling USA
 [787 Dreamliner](http://www.boeing.com/boeing/commercial/787family/index.page?)
 {% include image.html name="LEO_1478.jpg" alt="747" %}
 {% include background.html name="l.jpg"%}
+
+
+headers
+
+# H1
+
+## H2
+
+### H3
+
+#### H4
+
+##### H5
+
+###### H6
+
+
+Blockquotes
+
+> Blockquotes are very handy in email to emulate reply text.
+> This line is part of the same quote.
+
+
+
+```
+def what?
+  42
+end
+```
+{: .language-ruby}
+
+
+HTML
+: Hypertext Markup Language, a standardized system for tagging text files.
+
+CSS
+: Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language
+
+Line
+
+---
+
+1. First item
+2. Second item
+3. Third item
+
+* First item
+* Second item
+* Third item
+
+Table
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+
+**strong** text
+
+_emphasis_ text
+
+`inline` code
+
+[link](http://jekyllrb.com) text
+
+![Alt tag](/path/to/image.jpg)
