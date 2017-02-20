@@ -1,0 +1,63 @@
+---
+layout: default
+---
+<!--{% for image in site.static_files %}
+  {% if image.path contains 'posts/2017-01-27-elfin/gallery1/' %}
+      <p>{{image.path}}</p>
+  {% endif %}
+{% endfor %}-->
+
+
+<link rel="stylesheet" href="{{site.baseurl}}/css/gallery/blueimp-gallery.min.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap-image-gallery.css">
+<div class="container background-white">
+  <div  style="padding: 20px 0" id="links">
+        {% for image in site.static_files %}
+            {% if image.path contains 'posts/2017-01-27-elfin/gallery1' %}
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                <a class="thumbnail" href="{{ site.baseurl }}{{ image.path}}" data-gallery="">
+                <img class="img-responsive" src="{{site.baseurl}}{{ image.path}}" alt=""></a>
+                </div>
+            {% endif %}
+        {% endfor %}
+</div>
+<div id="blueimp-gallery" class="blueimp-gallery">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+    <div class="modal fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body next"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left prev">
+                        <i class="glyphicon glyphicon-chevron-left"></i>
+                        Previous
+                    </button>
+                    <button type="button" class="btn btn-primary next">
+                        Next
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Bootstrap JS is not required, but included for the responsive demo navigation and button states -->
+<script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+<script src="{{ site.baseurl }}/js/bootstrap/bootstrap-image-gallery.js"></script>
+<!--<script src="{{ site.baseurl }}/js/flickr/allimages.js"></script>-->
