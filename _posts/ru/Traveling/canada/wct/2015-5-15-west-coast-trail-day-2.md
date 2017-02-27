@@ -5,7 +5,7 @@ title:  "WEST COAST TRAIL DAY 2"
 date: 2015-05-15
 published: true
 tumblr: DSC00490.jpg
-image: /images/posts/2015-05-15-west-coast-trail-day2/DSC00490.jpg
+image: /images/posts/2015-05-15-west-coast-trail-day-2/DSC00490.jpg
 excerpt_separator: <!-- excerpt -->
 comments: true
 categories: ru Traveling Canada wct

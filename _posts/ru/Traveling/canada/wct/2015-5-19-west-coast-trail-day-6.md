@@ -1,11 +1,11 @@
 ---
 layout: post
 version: 1
-title:  "WEST COAST TRAIL DAY6"
+title:  "WEST COAST TRAIL DAY 6"
 date: 2015-05-19
 published: true
 tumblr: DSC01454.jpg
-image: /images/posts/2015-05-19-west-coast-trail-day6/DSC01454.jpg
+image: /images/posts/2015-05-19-west-coast-trail-day-6/DSC01454.jpg
 excerpt_separator: <!-- excerpt -->
 comments: true
 categories: ru Traveling Canada wct
