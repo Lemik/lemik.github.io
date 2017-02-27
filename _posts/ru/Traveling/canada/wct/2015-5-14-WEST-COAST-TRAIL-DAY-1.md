@@ -16,9 +16,9 @@ categories: ru Traveling Canada wct
 
 **М:** приключения начинаются еще со скайтрейна. В хорошем смысле. Рюкзак приятно тянет плечи, давно забытое ощущение и предвкушение похода длинной 75км накатывают волнами.
 
-{% include imagegallery.html path="2015-05-14-WEST-COAST-TRAIL-DAY-1/g1/" %}
+{% include imagegallery.html path="2015-05-14-west-coast-trail-day1/g1/" %}
 
-{% include imagegallery.html path="2015-05-14-WEST-COAST-TRAIL-DAY-1/g2/" %}
+{% include imagegallery.html path="2015-05-14-west-coast-trail-day1/g2/" %}
 
 Ребятам нужно отдать должное, вся логистика поездки прекрасно проработана,что становится понятно, когда мы на час раньше приезжаем на паром. Так что, запас времени на опоздать и причесаться-накраситься мы не исспользовали.
 
@@ -48,4 +48,4 @@ categories: ru Traveling Canada wct
 {% include image.html name="DSC00463.jpg"%}
 
 
-[продолжение](/ru/traveling/canada/wct/2015/05/15/WEST-COAST-TRAIL-DAY-2.html)
+[продолжение](/ru/traveling/canada/wct/2015/05/15/west-coast-trail-day2.html)
