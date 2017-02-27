@@ -86,6 +86,8 @@ Table
 
 _emphasis_ text
 
+~~Strike through this text.~~
+
 `inline` code
 
 [link](http://jekyllrb.com) text
