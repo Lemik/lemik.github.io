@@ -1,16 +1,16 @@
 ---
 layout: post
 version: 1
-title:  "WEST COAST TRAIL DAY TECHNICALSIDE"
+title:  "WEST COAST TRAIL DAY TECHNICAL-SIDE"
 date: 2015-05-20
 published: true
 tumblr: DSC00403.jpg
-image: /images/posts/2015-05-20-west-coast-trail-day-technicalside/DSC00403.jpg
+image: /images/posts/2015-05-20-west-coast-trail-day-technical-side/DSC00403.jpg
 excerpt_separator: <!-- excerpt -->
 comments: true
 categories: ru Traveling Canada wct
 ---
-Если вы пропустили начало на него можно перейти нажав на [ссылку](/ru/traveling/canada/wct/2015/05/14/west-coast-trail-day1.html)
+Если вы пропустили начало на него можно перейти нажав на [ссылку](/ru/traveling/canada/wct/2015/05/14/west-coast-trail-day-1.html)
 
 Отличный хайк средней сложности на 75км, я бы отводил на него 8 дней, так как есть много мест где хочется остановиться  с ночевкой, но и за 3-5 дней его  тоже можно пройти.
 <!-- excerpt -->

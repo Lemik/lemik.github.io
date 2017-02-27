@@ -11,7 +11,7 @@ comments: true
 categories: ru Traveling Canada wct
 ---
 
-Если вы пропустили начало на него можно перейти нажав на [ссылку](/ru/traveling/canada/wct/2015/05/14/west-coast-trail-day1.html)
+Если вы пропустили начало на него можно перейти нажав на [ссылку](/ru/traveling/canada/wct/2015/05/14/west-coast-trail-day-1.html)
 
 {% include image.html name="DSC01060.jpg"%}
 
@@ -60,7 +60,7 @@ categories: ru Traveling Canada wct
 Дальше проход под  **Owen Point.**
 Очаровательно, оно того стоило, все это ожидание.
 
-{% include imagegallery.html path="2015-05-18-west-coast-trail-day5/g1/" %}
+{% include imagegallery.html path="2015-05-18-west-coast-trail-day-5/g1/" %}
 
 А дальше нас ждала расплата.
 
@@ -94,4 +94,4 @@ categories: ru Traveling Canada wct
 
 сопровождал нас всю дорогу, и вот тут загадка. Кто это сделал ?
 
-[продолжение](/ru/traveling/canada/wct/2015/05/19/west-coast-trail-day6.html)
+[продолжение](/ru/traveling/canada/wct/2015/05/19/west-coast-trail-day-6.html)
