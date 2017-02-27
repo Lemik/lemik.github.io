@@ -11,7 +11,7 @@ comments: true
 categories: ru Traveling Canada wct
 ---
 
-Если вы пропустили начало на него можно перейти нажав на [ссылку](/ru/traveling/canada/wct/2015/05/14/west-coast-trail-day1.html)
+Если вы пропустили начало на него можно перейти нажав на [ссылку](/ru/traveling/canada/wct/2015/05/14/west-coast-trail-day-1.html)
 
 День пятый. Сладкие 5.
 
@@ -59,4 +59,4 @@ P.S. От Маши. Мне понадобилось порядка трех не
 
 Вот и все.
 
-[техническая сторона вопроса](/ru/traveling/canada/wct/2015/05/20/west-coast-trail-day-side.html)
+[техническая сторона вопроса](/ru/traveling/canada/wct/2015/05/20/west-coast-trail-technical-side.html)

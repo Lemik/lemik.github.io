@@ -1,7 +1,7 @@
 ---
 layout: post
 version: 1
-title:  "WEST COAST TRAIL DAY3"
+title:  "WEST COAST TRAIL DAY 3"
 date: 2015-05-16
 published: true
 tumblr: DSC00626.jpg
@@ -11,7 +11,7 @@ comments: true
 categories: ru Traveling Canada wct
 ---
 
-Если вы пропустили начало на него можно перейти нажав на [ссылку](/ru/traveling/canada/wct/2015/05/14/west-coast-trail-day1.html)
+Если вы пропустили начало на него можно перейти нажав на [ссылку](/ru/traveling/canada/wct/2015/05/14/west-coast-trail-day-1.html)
 
 **16 05 20:24. Cтали.**
 
@@ -23,7 +23,7 @@ categories: ru Traveling Canada wct
 
 Спастись спастись))) По дороге много резких подьемов и спусков. Грязь грязь грязь. Старые и новые мостики через грязь и болото. Деревья обхватом в несколько метров ( и возрастом около 700 лет).
 
-{% include imagegallery.html path="2015-05-16-west-coast-trail-day3/g1/" %}
+{% include imagegallery.html path="2015-05-16-west-coast-trail-day-3/g1/" %}
 
 Все огромно, наблюдаем свежие следы медведя на тропе и свежие какашки.
 
@@ -35,7 +35,7 @@ categories: ru Traveling Canada wct
 
 Бревна над ручьями – вполне себе тропа. Начинают встречаться деревянные лестницы по которым карабкаешься вврех-вниз.
 
-{% include imagegallery.html path="2015-05-16-west-coast-trail-day3/g2/" %}
+{% include imagegallery.html path="2015-05-16-west-coast-trail-day-3/g2/" %}
 
 Переход в 25 км первый в моей жизни. Могу идти еще. Потихоньку разбиваю ноги. Не послулшалась Леню, одела тонкие носки, сама виновата. Пусть лучше бы потели и воняли, но не бы ли бы растерты на 100 и1 волдырь.
 
@@ -43,7 +43,7 @@ categories: ru Traveling Canada wct
 
 Разочарование. Представляя пляж, ветерочек песочек, музыку и романтичекий флер вы жестко ошибетесь.
 
-{% include imagegallery.html path="2015-05-16-west-coast-trail-day3/g3/" %}
+{% include imagegallery.html path="2015-05-16-west-coast-trail-day-3/g3/" %}
 
 Хайк по пляжу то еще приключение, нужно следить за приливом, грузнешь в гальку, перепрыгиваешь мусор и бревна. Вгрузаешь в выброшенные приливом водоросли разгоняя мушек, много мусора. Особенно буйков на пляже.
 
@@ -51,16 +51,16 @@ categories: ru Traveling Canada wct
 
 Мы даже себе один подобрали на память. Океан избавляется от следов человека. В лужицах можно наблюдать микро креветок, анемоны и всякие странные живности. Находим вещи принесенные приливом из Японии  (на что окена трубется порядка двух лет).
 
-{% include imagegallery.html path="2015-05-16-west-coast-trail-day3/g4/" %}
+{% include imagegallery.html path="2015-05-16-west-coast-trail-day-3/g4/" %}
 
 {% include background.html name="DSC00673.jpg"%}
 
 Второй день отмечен поеданием вареного краба на переправе.
 
-{% include imagegallery.html path="2015-05-16-west-coast-trail-day3/g5/" %}
+{% include imagegallery.html path="2015-05-16-west-coast-trail-day-3/g5/" %}
 
 конечно он был дорог (20$) но всеже он того стоил. Всем желаюшим предлагали различного местного пива, но мы с Машей отказались. Я так понял пиво было хорошее, так как Стас забыл свою палку у вождя. Вождь сказал, что Стасу палка понадобится  и попросил  ее ему вернуть, что мы и сделали через час, как догнали ребят. Вообще дорога была шедрая к нам и мы принесли домой два новых фонарика и перчатки.
 
 {% include imagegallery.html path="2015-05-16-WEST-COAST-TRAIL-DAY-3/g6/" %}
 
-[продолжение](/ru/traveling/canada/wct/2015/05/17/west-coast-trail-day4.html)
+[продолжение](/ru/traveling/canada/wct/2015/05/17/west-coast-trail-day-4.html)
