@@ -5,7 +5,7 @@ title:  "WEST COAST TRAIL DAY TECHNICAL-SIDE"
 date: 2015-05-20
 published: true
 tumblr: DSC00403.jpg
-image: /images/posts/2015-05-20-west-coast-trail-day-technical-side/DSC00403.jpg
+image: /images/posts/2015-05-20-west-coast-trail-technical-side/DSC00403.jpg
 excerpt_separator: <!-- excerpt -->
 comments: true
 categories: ru Traveling Canada wct
