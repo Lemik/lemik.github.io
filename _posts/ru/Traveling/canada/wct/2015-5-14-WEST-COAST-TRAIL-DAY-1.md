@@ -1,7 +1,7 @@
 ---
 layout: post
 version: 1
-title:  "WEST COAST TRAIL DAY 1"
+title:  "WEST COAST TRAIL DAY1"
 date: 2015-05-14
 published: true
 tumblr: DSC00433.jpg
