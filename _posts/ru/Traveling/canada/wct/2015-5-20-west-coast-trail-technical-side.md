@@ -1,7 +1,7 @@
 ---
 layout: post
 version: 1
-title:  "WEST COAST TRAIL DAY TECHNICAL-SIDE"
+title:  "WEST COAST TRAIL TECHNICAL SIDE"
 date: 2015-05-20
 published: true
 tumblr: DSC00403.jpg
