@@ -11,7 +11,7 @@ comments: true
 categories: ru Traveling Canada wct
 ---
 
-Если вы пропустили начало на него можно перейти нажав на [ссылку](/ru/traveling/canada/wct/2015/05/14/WEST-COAST-TRAIL-DAY-1.html)
+Если вы пропустили начало на него можно перейти нажав на [ссылку](/ru/traveling/canada/wct/2015/05/14/west-coast-trail-day1.html)
 
 Кажется третий день похода, а по ощущениям уже прошла неделя.
 
@@ -25,15 +25,15 @@ categories: ru Traveling Canada wct
 
 отлив открывает искуссно выезанное водой и рифом скалистое дно.
 
-{% include imagegallery.html path="2015-05-17-WEST-COAST-TRAIL-DAY-4/g1/" %}
+{% include imagegallery.html path="2015-05-17-west-coast-trail-day4/g1/" %}
 
 {% include background.html name="DSC00925.jpg"%}
 
-{% include imagegallery.html path="2015-05-17-WEST-COAST-TRAIL-DAY-4/g2/" %}
+{% include imagegallery.html path="2015-05-17-west-coast-trail-day4/g2/" %}
 
 Грязь, корни, болото, лестницы, крутые подъемы и спуски, все повторяется.
 
-{% include imagegallery.html path="2015-05-17-WEST-COAST-TRAIL-DAY-4/g3/" %}
+{% include imagegallery.html path="2015-05-17-west-coast-trail-day4/g3/" %}
 
 И нескончаемый пляж. Кажется начинаю ненавидеть пляж. Погода подбадривает и показывается солнышко. Радостно лазим по пляжу как горные козлы перемахивая огромные деревья вываленые водой на берег.
 
@@ -41,7 +41,7 @@ categories: ru Traveling Canada wct
 
 Лестницы в ущельях, кабинки над реками, переправы по ледяному ручью, все это челлендж.
 
-{% include imagegallery.html path="2015-05-17-WEST-COAST-TRAIL-DAY-4/g4/" %}
+{% include imagegallery.html path="2015-05-17-west-coast-trail-day4/g4/" %}
 
 {% include background.html name="DSC00880.jpg"%}
 
@@ -51,7 +51,7 @@ categories: ru Traveling Canada wct
 
 Что особо запомнится так это одна из переправ. Я боюсь высоты.
 
-{% include imagegallery.html path="2015-05-17-WEST-COAST-TRAIL-DAY-4/g5/" %}
+{% include imagegallery.html path="2015-05-17-west-coast-trail-day4/g5/" %}
 
 Воруг высоко и нет деревьев. Вестибюлярка говорит “привет!”. Голова на лестнице кружится.Стараюсь не смотреть вниз и считать ступеньки, если остановлюсь, то отсюда только вертолетом снимут.
 
@@ -83,7 +83,7 @@ categories: ru Traveling Canada wct
 
 Где была еще одна книга учета в ктоторой мы рассписались
 
-{% include imagegallery.html path="2015-05-17-WEST-COAST-TRAIL-DAY-4/g6/" %}
+{% include imagegallery.html path="2015-05-17-west-coast-trail-day4/g6/" %}
 
 Интерестно то что судя по журналу тропа проходима с Февраля по Декабрь ходя еще было примечательно то что ее прошло 30 человек до нас тоесть до Мая(17 того).
 
@@ -99,4 +99,4 @@ categories: ru Traveling Canada wct
 
 {% include image.html name="DSC00796.jpg"%}
 
-[продолжение](/ru/traveling/canada/wct/2015/05/18/WEST-COAST-TRAIL-DAY-5.html)
+[продолжение](/ru/traveling/canada/wct/2015/05/18/west-coast-trail-day5.html)

@@ -10,7 +10,7 @@ excerpt_separator: <!-- excerpt -->
 comments: true
 categories: ru Traveling Canada wct
 ---
-Если вы пропустили начало на него можно перейти нажав на [ссылку](/ru/traveling/canada/wct/2015/05/14/WEST-COAST-TRAIL-DAY-1.html)
+Если вы пропустили начало на него можно перейти нажав на [ссылку](/ru/traveling/canada/wct/2015/05/14/west-coast-trail-day1.html)
 
 Отличный хайк средней сложности на 75км, я бы отводил на него 8 дней, так как есть много мест где хочется остановиться  с ночевкой, но и за 3-5 дней его  тоже можно пройти.
 <!-- excerpt -->
