@@ -8,10 +8,10 @@ tumblr: DSC01085.jpg
 image: /images/posts/2015-05-18-WEST-COAST-TRAIL-DAY-5/DSC01085.jpg
 excerpt_separator: <!-- excerpt -->
 comments: true
-categories: ru Traveling Canada
+categories: ru Traveling Canada wct
 ---
 
-Если вы пропустили начало на него можно перейти нажав на [ссылку](/ru/traveling/canada/2015/05/14/WEST-COAST-TRAIL-DAY-1.html)
+Если вы пропустили начало на него можно перейти нажав на [ссылку](/ru/traveling/canada/wct/2015/05/14/WEST-COAST-TRAIL-DAY-1.html)
 
 {% include image.html name="DSC01060.jpg"%}
 
@@ -93,3 +93,5 @@ categories: ru Traveling Canada
 {% include image.html name="DSC01088.jpg"%}
 
 сопровождал нас всю дорогу, и вот тут загадка. Кто это сделал ?
+
+[продолжение](/ru/traveling/canada/wct/2015/05/19/WEST-COAST-TRAIL-DAY-6.html)

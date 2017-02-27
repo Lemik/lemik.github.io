@@ -8,10 +8,10 @@ tumblr: DSC00490.jpg
 image: /images/posts/2015-05-15-WEST-COAST-TRAIL-DAY-2/DSC00490.jpg
 excerpt_separator: <!-- excerpt -->
 comments: true
-categories: ru Traveling Canada
+categories: ru Traveling Canada wct
 ---
 
-Если вы пропустили начало на него можно перейти нажав на [ссылку](/ru/traveling/canada/2015/05/14/WEST-COAST-TRAIL-DAY-1.html)
+Если вы пропустили начало на него можно перейти нажав на [ссылку](/ru/traveling/canada/wct/2015/05/14/WEST-COAST-TRAIL-DAY-1.html)
 
 **15.05 900 PortRenfrew День старта.**
 
@@ -127,3 +127,5 @@ Cтоит сказать, я рада, что мы идем в несезон. �
 {% include image.html name="DSC00558.jpg"%}
 
 {% include imagegallery.html path="2015-05-15-WEST-COAST-TRAIL-DAY-2/g2/" %}
+
+[продолжение](/ru/traveling/canada/wct/2015/05/16/WEST-COAST-TRAIL-DAY-3.html)

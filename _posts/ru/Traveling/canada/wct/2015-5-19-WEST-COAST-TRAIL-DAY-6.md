@@ -8,10 +8,10 @@ tumblr: DSC01454.jpg
 image: /images/posts/2015-05-19-WEST-COAST-TRAIL-DAY-6/DSC01454.jpg
 excerpt_separator: <!-- excerpt -->
 comments: true
-categories: ru Traveling Canada
+categories: ru Traveling Canada wct
 ---
 
-Если вы пропустили начало на него можно перейти нажав на [ссылку](/ru/traveling/canada/2015/05/14/WEST-COAST-TRAIL-DAY-1.html)
+Если вы пропустили начало на него можно перейти нажав на [ссылку](/ru/traveling/canada/wct/2015/05/14/WEST-COAST-TRAIL-DAY-1.html)
 
 День пятый. Сладкие 5.
 
@@ -58,3 +58,5 @@ categories: ru Traveling Canada
 P.S. От Маши. Мне понадобилось порядка трех недель, чтобы признаться себе, что я пойду эту тропу еще раз.
 
 Вот и все.
+
+[техническая сторона вопроса](/ru/traveling/canada/wct/2015/05/20/WEST-COAST-TRAIL-TECHNICAL-SIDE.html)

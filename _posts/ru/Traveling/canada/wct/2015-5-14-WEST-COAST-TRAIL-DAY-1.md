@@ -8,7 +8,7 @@ tumblr: DSC00433.jpg
 image: /images/posts/2015-05-14-WEST-COAST-TRAIL-DAY-1/DSC00433.jpg
 excerpt_separator: <!-- excerpt -->
 comments: true
-categories: ru Traveling Canada
+categories: ru Traveling Canada wct
 ---
 Пост содержит довольно много мыслей, иногда разбросанных, но в основном, структурированных. Главное-интересных.
 <!-- excerpt -->
@@ -46,3 +46,6 @@ categories: ru Traveling Canada
 – совет номер раз, уточните у тетеньки в будке, чтоб вокруг было  два-три пустых кемграунда по возможности. Так вы сможете быть по дальше от людей. Котрые приехали на кемпинг в домиках на колесах с бинзопилами и музыкой не говоря уже о детях и собачках )). Кстати кошмарить собачку рано утром одно удовольствие. Маня у меня добрая, но и память у неё хорошая.
 
 {% include image.html name="DSC00463.jpg"%}
+
+
+[продолжение](/ru/traveling/canada/wct/2015/05/15/WEST-COAST-TRAIL-DAY-2.html)

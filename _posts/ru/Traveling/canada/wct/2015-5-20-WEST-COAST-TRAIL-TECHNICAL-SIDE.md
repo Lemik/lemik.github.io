@@ -8,9 +8,9 @@ tumblr: DSC00403.jpg
 image: /images/posts/2015-05-20-WEST-COAST-TRAIL-TECHNICAL-SIDE/DSC00403.jpg
 excerpt_separator: <!-- excerpt -->
 comments: true
-categories: ru Traveling Canada
+categories: ru Traveling Canada wct
 ---
-Если вы пропустили начало на него можно перейти нажав на [ссылку](/ru/traveling/canada/2015/05/14/WEST-COAST-TRAIL-DAY-1.html)
+Если вы пропустили начало на него можно перейти нажав на [ссылку](/ru/traveling/canada/wct/2015/05/14/WEST-COAST-TRAIL-DAY-1.html)
 
 Отличный хайк средней сложности на 75км, я бы отводил на него 8 дней, так как есть много мест где хочется остановиться  с ночевкой, но и за 3-5 дней его  тоже можно пройти.
 <!-- excerpt -->
@@ -72,3 +72,12 @@ Pем.набор
 | 5    |   Mo May 18	hike                       | овсянка   | паштет + остатки всего | лазанья         |
 | 6    |   Tu May 19	Return                     | овсянка   |                        |                 |
 {: Class="table"}
+
+Вычеркнутое не понадобилось так как мы останавились в Tim Hortons и там купили себе обед )))
+
+Полезные ссылки:
+
+* [Сайт моего Друга Антона Белоусова где также имеется подробных отчет и полно фоток со мной](http://www.bielousov.com/2015/west-coast-trail/)
+* Путеводитель по тропе. Советую [Blisters and Bliss “A Trekker’s Guide to the West Coast Trail”](https://vpl.bibliocommons.com/item/show/3745682038_blisters_and_bliss) ее можно взять в библиотеке.
+* [http://www.westcoasttrailbc.com/trail_guidebook_map.htm](http://www.westcoasttrailbc.com/trail_guidebook_map.htm)
+* [http://www.pc.gc.ca/eng/pn-np/bc/pacificrim/activ/activ6a/v.aspx]http://www.pc.gc.ca/eng/pn-np/bc/pacificrim/activ/activ6a/v.aspx

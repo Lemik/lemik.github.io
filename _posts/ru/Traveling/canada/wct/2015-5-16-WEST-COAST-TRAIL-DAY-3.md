@@ -8,10 +8,10 @@ tumblr: DSC00626.jpg
 image: /images/posts/2015-05-16-WEST-COAST-TRAIL-DAY-3/DSC00626.jpg
 excerpt_separator: <!-- excerpt -->
 comments: true
-categories: ru Traveling Canada
+categories: ru Traveling Canada wct
 ---
 
-Если вы пропустили начало на него можно перейти нажав на [ссылку](/ru/traveling/canada/2015/05/14/WEST-COAST-TRAIL-DAY-1.html)
+Если вы пропустили начало на него можно перейти нажав на [ссылку](/ru/traveling/canada/wct/2015/05/14/WEST-COAST-TRAIL-DAY-1.html)
 
 **16 05 20:24. Cтали.**
 
@@ -63,3 +63,5 @@ categories: ru Traveling Canada
 конечно он был дорог (20$) но всеже он того стоил. Всем желаюшим предлагали различного местного пива, но мы с Машей отказались. Я так понял пиво было хорошее, так как Стас забыл свою палку у вождя. Вождь сказал, что Стасу палка понадобится  и попросил  ее ему вернуть, что мы и сделали через час, как догнали ребят. Вообще дорога была шедрая к нам и мы принесли домой два новых фонарика и перчатки.
 
 {% include imagegallery.html path="2015-05-16-WEST-COAST-TRAIL-DAY-3/g6/" %}
+
+[продолжение](/ru/traveling/canada/wct/2015/05/17/WEST-COAST-TRAIL-DAY-4.html)
