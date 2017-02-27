@@ -5,7 +5,7 @@ title:  "WEST COAST TRAIL DAY TECHNICAL SIDE"
 date: 2015-05-20
 published: true
 tumblr: DSC00403.jpg
-image: /images/posts/2015-05-20-WEST-COAST-TRAIL-TECHNICAL-SIDE/DSC00403.jpg
+image: /images/posts/2015-05-20-west-coast-trail-day-technical-side/DSC00403.jpg
 excerpt_separator: <!-- excerpt -->
 comments: true
 categories: ru Traveling Canada wct
@@ -80,4 +80,4 @@ Pем.набор
 * [Сайт моего Друга Антона Белоусова где также имеется подробных отчет и полно фоток со мной](http://www.bielousov.com/2015/west-coast-trail/)
 * Путеводитель по тропе. Советую [Blisters and Bliss “A Trekker’s Guide to the West Coast Trail”](https://vpl.bibliocommons.com/item/show/3745682038_blisters_and_bliss) ее можно взять в библиотеке.
 * [http://www.westcoasttrailbc.com/trail_guidebook_map.htm](http://www.westcoasttrailbc.com/trail_guidebook_map.htm)
-* [http://www.pc.gc.ca/eng/pn-np/bc/pacificrim/activ/activ6a/v.aspx]http://www.pc.gc.ca/eng/pn-np/bc/pacificrim/activ/activ6a/v.aspx
+* [http://www.pc.gc.ca/eng/pn-np/bc/pacificrim/activ/activ6a/v.aspx](http://www.pc.gc.ca/eng/pn-np/bc/pacificrim/activ/activ6a/v.aspx)
