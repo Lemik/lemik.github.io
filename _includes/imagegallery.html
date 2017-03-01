@@ -1,7 +1,7 @@
 <!--{% capture imagePath %}{{page.date | date: "%Y-%m-%d" }}-{{page.title | slugify }}{% endcapture %}-->
 <link rel="stylesheet" href="{{site.baseurl}}/css/gallery/blueimp-gallery.min.css">
 <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap-image-gallery.css">
-<div class="container background-white">
+<div class="container">
   <div  style="padding: 20px 0" id="links">
 {% for image in site.static_files %}
     {% if image.path contains {{include.path}} %}
