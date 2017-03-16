@@ -63,3 +63,7 @@ I really enjoy Dad Jokes but don't get all of them. Many of them based on a lang
 > Why Did the scarecrow win an award? Because he was outstanding in his field
 
 > Why do chicken coops only have two doors? Because if they had four, they would be chicken sedans!
+
+> It's not that the man did not know how to juggle, he just didn't have the balls to do it.
+
+> What do you do to dead chemists? You barium.
