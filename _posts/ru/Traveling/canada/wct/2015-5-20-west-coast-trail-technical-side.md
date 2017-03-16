@@ -81,3 +81,7 @@ Pем.набор
 * Путеводитель по тропе. Советую [Blisters and Bliss “A Trekker’s Guide to the West Coast Trail”](https://vpl.bibliocommons.com/item/show/3745682038_blisters_and_bliss) ее можно взять в библиотеке.
 * [http://www.westcoasttrailbc.com/trail_guidebook_map.htm](http://www.westcoasttrailbc.com/trail_guidebook_map.htm)
 * [http://www.pc.gc.ca/eng/pn-np/bc/pacificrim/activ/activ6a/v.aspx](http://www.pc.gc.ca/eng/pn-np/bc/pacificrim/activ/activ6a/v.aspx)
+
+<figure style="text-align: center;">
+  <iframe  width="853" height="480" src="https://www.youtube.com/embed/XmiOJutxyHY" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
