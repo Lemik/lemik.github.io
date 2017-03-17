@@ -67,3 +67,5 @@ I really enjoy Dad Jokes but don't get all of them. Many of them based on a lang
 > It's not that the man did not know how to juggle, he just didn't have the balls to do it.
 
 > What do you do to dead chemists? You barium.
+
+> Why don't some couples go to the gym? Because some relationships just don't work out.
