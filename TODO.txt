@@ -1,6 +1,5 @@
-Shere button  https://superdevresources.com/share-buttons-jekyll
-	          https://simplesharingbuttons.com/#preview
-
+- Add Site map-( https://blog.webjeda.com/jekyll-sitemap/)
+- SEO https://blog.webjeda.com/optimize-jekyll-seo/
 - Add Header
         <!-- Title -->
         <title>Habitat - A Professional Bootstrap Template</title>
@@ -13,7 +12,16 @@ Shere button  https://superdevresources.com/share-buttons-jekyll
 - Add blog page version
 - remove language from category and made it saperate attribute 
 - Add Site map-( https://blog.webjeda.com/jekyll-sitemap/)
-- SEO https://blog.webjeda.com/optimize-jekyll-seo/
+
 
 http://cloudcannon.com/tips/2014/12/12/the-ultimate-list-of-services-for-static-websites.html
 https://blog.webjeda.com/jekyll-admin/
+
+
+
+
+
+Done-------------------------------------------------------------------- 
+- Shere button  https://superdevresources.com/share-buttons-jekyll
+	            https://simplesharingbuttons.com/#preview
+- Feed (all, travel, books)				
