@@ -69,3 +69,5 @@ I really enjoy Dad Jokes but don't get all of them. Many of them based on a lang
 > What do you do to dead chemists? You barium.
 
 > Why don't some couples go to the gym? Because some relationships just don't work out.
+
+> Today a man knocked on my door and asked for a small donation towards the local swimming pool. I gave him a glass of water.
