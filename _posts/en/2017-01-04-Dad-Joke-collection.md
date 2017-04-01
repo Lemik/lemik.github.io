@@ -4,7 +4,7 @@ version: 1
 title:  "Dad Joke collection"
 date: 2017-04-01
 published: false
-image: /images/posts/2014-11-14-boeing/LEO_1538.jpg
+image: /images/posts/2017-04-01-Dad-Joke-collection/165647.jpg
 excerpt_separator: <!-- excerpt -->
 comments: true
 categories: en 
