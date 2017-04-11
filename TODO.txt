@@ -18,10 +18,11 @@ http://cloudcannon.com/tips/2014/12/12/the-ultimate-list-of-services-for-static-
 https://blog.webjeda.com/jekyll-admin/
 
 
-
+look--------------------------------------------------------------------------
+images http://masonry.desandro.com
 
 
 Done-------------------------------------------------------------------- 
 - Shere button  https://superdevresources.com/share-buttons-jekyll
 	            https://simplesharingbuttons.com/#preview
-- Feed (all, travel, books)				
+- Feed (all)				
