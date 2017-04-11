@@ -45,7 +45,7 @@ $(function () {
         .append(
 				$('<img>')
 				.prop('src', baseUrl + '_m.jpg')
-				.prop('style', 'height: 240px; padding: 1px'))
+				.prop('class', 'gallery'))
         .prop('href', baseUrl + '_b.jpg')
         .prop('title', photo.title)
         .attr('data-gallery', '')
