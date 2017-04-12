@@ -53,9 +53,14 @@ body {
   position: relative;
 }
 .container {
- /* max-width: 1080px;*/
+  max-width: 1080px;
   padding-left: 40px;
   padding-right: 40px;
+  width: 100%;
+}
+.containerImg{
+  padding-left: 60px;
+  padding-right: 60px;
   width: 100%;
 }
 .container.no-padding {
