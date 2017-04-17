@@ -1,4 +1,9 @@
- #map {
+.gallery{
+height: 240px; 
+padding: 1px; 
+border-radius: 10px;
+}
+#map {
         height: 400px;
         width: 100%;
        }
