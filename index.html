@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-  <div>
+<div>
       <div class="container  col-md-12 bottom-border">
           <div class="blog-item-header">
               <h2><a href="photos.html">Photo Portfolio</a></h2>
@@ -121,11 +121,18 @@ layout: default
     </div>
 </div>
 <div>
-    <div class="container col-md-12 portfolio-group no-padding">
-		<div class="blog-item-header">
+    <div class="container bottom-border">
+	<div class="blog-item-header">
+         <h2><a href="map.html">All Posts on one Map</a></h2>
+    </div>
+	<iframe id="map" src="https://www.google.com/maps/d/embed?mid=1XBC_jkk7IlLpgy_JsBP1ahDzpCk&hl=en"></iframe>
+	</div>
+</div>
+<div>
+    <div class="container col-md-12  ">
+	<div class="blog-item-header">
               <h2><a href="blog-Grid.html">Previous posts</a></h2>
         </div>
-
         <!-- Portfolio Item -->
         {% for post in site.posts offset:1 limit:3 %}
         <div class="col-md-4 portfolio-item margin-bottom-40 code">

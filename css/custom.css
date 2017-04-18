@@ -1,5 +1,9 @@
-.gallery{
-height: 240px; 
-padding: 1px; 
-border-radius: 10px;
+.gallery {
+	height: 240px; 
+	padding: 1px; 
+	border-radius: 10px;
+}
+#map {
+	height: 600px;
+	width: 100%;
 }
