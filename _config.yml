@@ -16,11 +16,24 @@ baseurl: ""
 #url: "http://lemik.github.io" # the base hostname & protocol for your site
 url: "http://Dushyn.com"
 # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+#twitter_username: jekyllrb
+#github_username:  jekyll
 
 # Build settings
 markdown: kramdown
 
 
 googleAnalitycsID: UA-58426023-1
+
+cloudinary:
+  cloud_name: dushyncloudinary
+  #set false for production 
+  verbose: true 
+  presets:
+    default:
+      min_width: 320
+      max_width: 1600
+      fallback_max_width: 800
+      steps: 5
+      sizes: "(min-width: 50rem) 50rem, 90vw"
+  
