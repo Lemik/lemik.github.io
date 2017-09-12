@@ -11,10 +11,11 @@
       </button>
       <a href="{{ site.baseurl }}/"> <img src="{{ site.baseurl }}/images/LD.png"></a>
     </div>
-
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
+	     <li><a href="{{ site.baseurl }}/map.html">Maps</a></li>
+<!--------------------------------------------------------------------------------------------------------------------------------->		 
         {%if  page.url  == '/blog.html' or page.url  == '/blog-Grid.html'%}
          <li role="presentation" class="dropdown">
            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -31,7 +32,9 @@
         {%else%}
             <li><a href="{{ site.baseurl }}/blog-Grid.html">Blog</a></li>
         {%endif%}
+<!--------------------------------------------------------------------------------------------------------------------------------->		
           <li><a href="{{ site.baseurl }}/photos.html">Photos</a></li>
+<!--------------------------------------------------------------------------------------------------------------------------------->		  
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

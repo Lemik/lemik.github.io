@@ -1,0 +1,13 @@
+.gallery {
+	height: 240px; 
+	padding: 1px; 
+	border-radius: 10px;
+}
+#map {
+	height: 600px;
+	width: 100%;
+}
+#map800 {
+	height: 800px;
+	width: 100%;
+}
