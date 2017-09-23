@@ -17,7 +17,14 @@
 
 <p>
   Create a simple network with some nodes and edges. http://visjs.org/
+  https://github.com/almende/vis/issues/2355
 </p>
+<input type="button" onclick="clusterByHubsize()" value="Cluster by hubsize"> <br />
+<input type="button" onclick="clusterOutliers()" value="Cluster outliers"> <br />
+<input type="button" onclick="clusterByCid()" value="Cluster all nodes with CID = 1"> <br />
+<input type="button" onclick="clusterByColor()" value="By Family Name "> <br />
+
+
 
 <div id="mynetwork"></div>
 <pre id="eventSpan"></pre>
@@ -29,22 +36,22 @@ var DIR = 'img/indonesia/';
   // create an array with nodes
   var nodes = new vis.DataSet([
     {id: 1, label: 'Irene Victoria Dushyn', group:'GenderF',shape: 'circularImage', image: DIR + '1.png'},
-    {id: 2, label: 'Leonid Dushyn', group:'GenderM', shape: 'circularImage', image: DIR + '2.png'},
-    {id: 3, label: 'Mariia Dushyna', group:'GenderF', shape: 'circularImage', image: DIR + '3.png'},
-    {id: 4, label: 'Igor Dushyn', group:'GenderM', shape: 'circularImage', image: DIR + '2.png'},
-    {id: 5, label: 'Natasha Peters', group:'GenderF', shape: 'circularImage', image: DIR + '4.png'},
-	{id: 6, label: 'Tomara Ivanova Dushyna \ Fedotuk', group:'GenderF', shape: 'circularImage', image: DIR + '2.png'},
+    {id: 2, label: 'Leonid Dushyn', group:'GenderM', shape: 'circularImage',cid: 0, image: DIR + '2.png'},
+    {id: 3, label: 'Mariia Dushyna', group:'GenderF', shape: 'circularImage',cid: 0, image: DIR + '3.png'},
+    {id: 4, label: 'Igor Dushyn', group:'GenderM', shape: 'circularImage',cid: 1, image: DIR + '2.png'},
+    {id: 5, label: 'Natasha Peters', group:'GenderF', shape: 'circularImage', cid: 2, image: DIR + '4.png'},
+	{id: 6, label: 'Tomara Ivanova Dushyna \ Fedotuk', group:'GenderF', cid: 1, shape: 'circularImage', image: DIR + '2.png'},
 	{id: 7, label: 'Rene Dusnya', group:'GenderF', shape: 'circularImage', image: DIR + '2.png'},
-	{id: 8, label: 'Tomas Peters', group:'GenderM', shape: 'circularImage', image: DIR + '4.png'},
+	{id: 8, label: 'Tomas Peters', group:'GenderM', shape: 'circularImage', cid: 3, image: DIR + '4.png'},
 	{id: 9, label: 'Karlova Evena', group:'GenderF', shape: 'circularImage', image: DIR + '3.png'},
 	{id: 10, label: 'Karlov Gleb', group:'GenderM', shape: 'circularImage', image: DIR + '3.png'},
 	
 	{id: 11, label: 'Victoriya Alekseevna Dushyna', group:'GenderF', shape: 'circularImage', image: DIR + '8.png'},
-	{id: 12, label: 'Olexey Olegovich Dushyn', group:'GenderM', shape: 'circularImage', image: DIR + '8.png'},
-	{id: 13, label: 'Natalia Anatolevna Dushyna', group:'GenderF', shape: 'circularImage', image: DIR + '5.png'},
+	{id: 12, label: 'Olexey Olegovich Dushyn', group:'GenderM', shape: 'circularImage',FamilyName:'Dushyn',cid: 4, image: DIR + '8.png'},
+	{id: 13, label: 'Natalia Anatolevna Dushyna', group:'GenderF', shape: 'circularImage',FamilyName:'Dushyn',cid: 4, image: DIR + '5.png'},
 	
-	{id: 14, label: 'Alex Olegovich Dushyn', group:'GenderM', shape: 'circularImage', image: DIR + '8.png'},
-	{id: 15, label: 'Natali Dushyna', group:'GenderF', shape: 'circularImage', image: DIR + '8.png'},
+	{id: 14, label: 'Alex Olegovich Dushyn', group:'GenderM', shape: 'circularImage',FamilyName:'Dushyn',cid: 5, image: DIR + '8.png'},
+	{id: 15, label: 'Natali Dushyna', group:'GenderF', shape: 'circularImage',FamilyName:'Dushyn',cid: 5, image: DIR + '8.png'},
 	
 	{id: 16, label: 'Oleg Leonidovich Dushyn', group:'GenderM', shape: 'circularImage', image: DIR + '8.png'},
 	{id: 17, label: 'Nina Vacilevna Dushyna', group:'GenderF', shape: 'circularImage', image: DIR + '6.png'},
@@ -193,20 +200,43 @@ var DIR = 'img/indonesia/';
     edges: edges
   };
   var options = {
+  
   groups: {
     GenderF: {color:{background:'pink', border:'pink'}, borderWidth:5},
 	GenderM: {color:{background:'DodgerBlue', border:'DodgerBlue'}, borderWidth:5},
 	B:{color:{color:'red'}, borderWidth:5}
   },
   nodes: {
+ // physics: false,
   shadow:true
   },
   edges: {
+          smooth: {
+                      type: 'cubicBezier',
+                      forceDirection: 'vertical',
+                      roundness: 1
+                    },
     shadow:true
-	}
+	},
+   layout: {
+                  //  hierarchical: {
+                  //    direction: 'DU',
+                    //  nodeSpacing: 150
+                  //  }
+                  },
+    interaction: {dragNodes :true},
+    physics:false
   };
   var network = new vis.Network(container, data, options);
   
+  var network = new vis.Network(container, data, options);
+  network.on("selectNode", function(params) {
+      if (params.nodes.length == 1) {
+          if (network.isCluster(params.nodes[0]) == true) {
+              network.openCluster(params.nodes[0]);
+          }
+      }
+  });
   
   network.on("click", function (params) {
         params.event = "[original event]";
@@ -218,6 +248,59 @@ var DIR = 'img/indonesia/';
 		var win = window.open(this.getNodeAt(params.pointer.DOM)+'.html', '_blank');
 		win.focus();
     });
+//clustering	
+	function clusterByHubsize() {
+      network.setData(data);
+      var clusterOptionsByData = {
+          processProperties: function(clusterOptions, childNodes) {
+            clusterOptions.label = "[" + childNodes.length + "]";
+            return clusterOptions;
+          },
+          clusterNodeProperties: {borderWidth:3, shape:'box', font:{size:30}}
+      };
+      network.clusterByHubsize(undefined, clusterOptionsByData);
+  }
+  function clusterOutliers() {
+      network.setData(data);
+      network.clusterOutliers();
+  }
+   function clusterByCid() {
+      network.setData(data);
+	  var FamilyName = ['Dushyn', 'Dushyn', 'Peters', 'Dushyn', 'Dushyn'];
+	  for (var i = 0; i < 5; i++) {
+      var clusterOptionsByData = {
+	    joinCondition:function(childOptions) {
+              return childOptions.cid == i;
+          },
+          clusterNodeProperties: {id:'cidCluster'+i, borderWidth:3, shape:'database',label:FamilyName[i]}
+	  
+      };
+      network.cluster(clusterOptionsByData);
+	  }}
+	  
+	  function clusterByColor() {
+      network.setData(data);
+      var FamilyName = ['Dushyn', 'Dushyn', 'Peters', 'Dushyn', 'Dushyn'];
+      var clusterOptionsByData;
+      for (var i = 0; i < FamilyName.length; i++) {
+          var FamilyName = FamilyName[i];
+          clusterOptionsByData = {
+              joinCondition: function (childOptions) {
+                  return childOptions.FamilyName == FamilyName; // the color is fully defined in the node.
+              },
+              processProperties: function (clusterOptions, childNodes, childEdges) {
+                  var totalMass = 0;
+                  for (var i = 0; i < childNodes.length; i++) {
+                      totalMass += childNodes[i].mass;
+                  }
+                  clusterOptions.mass = totalMass;
+                  return clusterOptions;
+              },
+              clusterNodeProperties: {id: FamilyName, borderWidth: 3, shape: 'database', label:FamilyName}
+          };
+          network.cluster(clusterOptionsByData);
+      }
+  }
 </script>
 
 
