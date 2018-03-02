@@ -16,8 +16,8 @@ baseurl: ""
 #url: "http://lemik.github.io" # the base hostname & protocol for your site
 url: "http://Dushyn.com"
 # the base hostname & protocol for your site
-#twitter_username: jekyllrb
-#github_username:  jekyll
+twitter_username: jekyllrb
+github_username:  jekyll
 
 # Build settings
 markdown: kramdown
@@ -27,12 +27,11 @@ googleAnalitycsID: UA-58426023-1
 
 cloudinary:
   cloud_name: dushyncloudinary
-  #set false for production 
-  verbose: true 
+  verbose: true #When set to true, this setting will show messages in the console when something goes wrong, such [Cloudinary] Couldn't find this image to check its width: /path/to/jekyll/_site/assets/img.jpg
   presets:
     default:
       min_width: 320
-      max_width: 864
-      steps: 2
+      max_width: 1200
+      fallback_max_width: 800
+      steps: 5
       sizes: "(min-width: 50rem) 50rem, 90vw"
-  
