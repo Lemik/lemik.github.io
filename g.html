@@ -2,4 +2,16 @@
 layout: default
 ---
 
-{% cloudinary /images/4x1200x600.jpg alt="beautiful!" %}
+<img src="https://res.cloudinary.com/dushyncloudinary/image/fetch/http://dushyn.com/images/3x1200x600.jpg" 
+  srcset="https://res.cloudinary.com/dushyncloudinary/image/fetch/http://dushyn.com/images/3x1200x600.jpg
+  320w, https://res.cloudinary.com/dushyncloudinary/image/fetch/http://dushyn.com/images/3x1200x600.jpg
+  540w, https://res.cloudinary.com/dushyncloudinary/image/fetch/http://dushyn.com/images/3x1200x600.jpg
+  760w, https://res.cloudinary.com/dushyncloudinary/image/fetch/http://dushyn.com/images/3x1200x600.jpg
+  980w, https://res.cloudinary.com/dushyncloudinary/image/fetch/http://dushyn.com/images/3x1200x600.jpg
+  1200w" sizes="(min-width: 50rem) 50rem, 90vw" alt="beautiful!" width="1200" height="600">
+
+
+  
+  
+  
+  {% cloudinary /images/3x1200x600.jpg alt="beautiful!" %}

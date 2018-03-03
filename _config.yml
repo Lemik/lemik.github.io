@@ -22,12 +22,12 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 
-
 googleAnalitycsID: UA-58426023-1
 
 cloudinary:
   cloud_name: dushyncloudinary
-  verbose: true #When set to true, this setting will show messages in the console when something goes wrong, such [Cloudinary] Couldn't find this image to check its width: /path/to/jekyll/_site/assets/img.jpg
+  #When set to true, this setting will show messages in the console when something goes wrong, such [Cloudinary] Couldn't find this image to check its width: /path/to/jekyll/_site/assets/img.jpg
+  verbose: true 
   presets:
     default:
       min_width: 320
