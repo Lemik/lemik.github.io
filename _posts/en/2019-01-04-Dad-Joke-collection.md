@@ -13,3 +13,9 @@ categories: en
 
 > How AI cross the street?
   no one actuly knows but it defenrtly did a good job !
+
+> What's the difference between in-laws and outlaws? Outlaws are wanted
+
+> Knowledge isn't free. You need to pay attention
+
+> Gavai is ossom. Every one what to get lade
