@@ -12,7 +12,7 @@ categories: en
 
 
 > How AI cross the street?
-  no one actuly knows but it defenrtly did a good job !
+   No one actuly knows but it defenrtly did a good job !
 
 > What's the difference between in-laws and outlaws? Outlaws are wanted
 
