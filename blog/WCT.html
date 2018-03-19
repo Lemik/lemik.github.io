@@ -1,0 +1,32 @@
+---
+layout: fullScreen
+title: How I become a father
+---
+
+<div class="row">
+    <div class="col-md-12 portfolio-group no-padding">
+        <!-- Portfolio Item -->
+        {% assign posts = site.posts | sort: 'title' %}
+        {% for post in posts%}
+        {%if post.categories contains "wct"%}
+        <div class="col-md-4 portfolio-item margin-bottom-40 code">
+            <div>
+                <a href="{{ post.url | prepend: site.baseurl }}">
+                    <figure>
+                      {%if post.image %}
+                        <img src="{{ post.image }}" alt="image1">
+                        {%else%}
+                        <img src="images/2x200x400.jpg" alt="image1">
+                        {%endif%}
+                        <figcaption>
+                            <h3 class="margin-top-20">{{ post.title }}</h3>
+                            <span>{{ post.description }}</span>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
