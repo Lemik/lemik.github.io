@@ -1,0 +1,10 @@
+-executionpolicy
+bypass
+PerfEng\TestRunner\Scripts\TestRunnerRemote.ps1 -computer plperfload01 
+-config spt1 -runlist spt1.envReliabilityTest.txt -noIisResetOnRetry -verbose -passOnDeviation --noValidate
+
+
+-executionpolicy
+bypass
+PerfEng\TestRunner\Scripts\TestRunnerRemote.ps1 -computer plperfload03 -config na1 -runlist na1.synthetic.txt 
+-noIisResetOnRetry -verbose -passOnDeviation -donotstoreDtPurePaths -noValidate -uploadToGraphite -skipSetup
