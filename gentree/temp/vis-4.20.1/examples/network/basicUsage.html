@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+  <script type="text/javascript" src="../../dist/vis.js"></script>
+  <link href="../../dist/vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  Create a simple network with some nodes and edges. http://visjs.org/
+</p>
+
+<div id="mynetwork"></div>
+<pre id="eventSpan"></pre>
+
+<script type="text/javascript">
+
+var DIR = 'img/indonesia/';
+
+  // create an array with nodes
+  var nodes = new vis.DataSet([
+    {id: 1, label: 'Irene Victoria Dushyn', group:'GenderF',shape: 'circularImage', image: DIR + '1.png'},
+    {id: 2, label: 'Leonid Dushyn', group:'GenderM', shape: 'circularImage', image: DIR + '2.png'},
+    {id: 3, label: 'Mariia Dushyna', group:'GenderF', shape: 'circularImage', image: DIR + '3.png'},
+    {id: 4, label: 'Igor Dushyn', group:'GenderM', shape: 'circularImage', image: DIR + '4.png'},
+    {id: 5, label: 'Natasha Peters', group:'GenderF', shape: 'circularImage', image: DIR + '5.png'},
+	{id: 6, label: 'Toma Dushyna', group:'GenderF', shape: 'circularImage', image: DIR + '6.png'},
+	{id: 7, label: 'Rene Dusnya', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+	{id: 8, label: 'Tomas Peters', group:'GenderM', shape: 'circularImage', image: DIR + '5.png'},
+	{id: 9, label: 'Karlova Evena', group:'GenderF', shape: 'circularImage', image: DIR + '3.png'},
+	{id: 10, label: 'Karlov Gleb', group:'GenderM', shape: 'circularImage', image: DIR + '3.png'},
+	
+	{id: 11, label: 'Victoriya Alekseevna Dushyna', group:'GenderF', shape: 'circularImage', image: DIR + '8.png'},
+	{id: 12, label: 'Olexey Olegovich Dushyn', group:'GenderM', shape: 'circularImage', image: DIR + '8.png'},
+	{id: 13, label: 'Natalia Anatolevna Dushyna', group:'GenderF', shape: 'circularImage', image: DIR + '8.png'},
+	
+	{id: 14, label: 'Alex Olegovich Dushyn', group:'GenderM', shape: 'circularImage', image: DIR + '8.png'},
+	{id: 15, label: 'Natali Dushyna ', group:'GenderF', shape: 'circularImage', image: DIR + '8.png'},
+	
+	{id: 16, label: 'Natali Dushyna ', group:'GenderF', shape: 'circularImage', image: DIR + '8.png'},
+	
+	
+	
+  ]);
+
+  // create an array with edges
+  var edges = new vis.DataSet([
+//perants   
+    {from: 1, to: 2, arrows:'from', color:{color:'black'}, title:'daughter'},  {from: 1, to: 3, arrows:'from', color:{color:'black'},title:'daughter'},
+    {from: 2, to: 4, arrows:'from', color:{color:'black'}, title:'son'}     ,  {from: 2, to: 5, arrows:'from', color:{color:'black'},title:'son'},
+	{from: 7, to: 4, arrows:'from', color:{color:'black'}, title:'daughter'},  {from: 7, to: 6, arrows:'from', color:{color:'black'},title:'daughter'},
+	{from: 3, to: 9, arrows:'from', color:{color:'black'}, title:'daughter'},  {from: 10, to: 9, arrows:'from', color:{color:'black'}, title:'son'},
+	{from: 11, to: 12, arrows:'from', color:{color:'black'}, title:'daughter'},{from: 11, to: 13, arrows:'from', color:{color:'black'},title:'daughter'},
+//marid
+	 {from: 2, to: 3, color:{color:'blue'}, title:'marid'},
+	 {from: 4, to: 6, color:{color:'blue'}, title:'marid'},
+	 {from: 5, to: 8, color:{color:'blue'}, title:'marid'},
+	 {from: 12, to: 13, color:{color:'blue'}, title:'marid'},
+	 {from: 14, to: 15, color:{color:'blue'}, title:'marid'},
+	 
+	 
+//divorsed
+	{from: 4, to: 5, color:{color:'blue'},dashes:true, title:'diwarsed'},
+
+	
+  ]);
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+  groups: {
+    GenderF: {color:{background:'pink'}, borderWidth:2},
+	GenderM: {color:{background:'DodgerBlue'}, borderWidth:2},
+	B:{color:{color:'red'}, borderWidth:5}
+  },
+  nodes: {
+  shadow:true
+  },
+  edges: {
+    shadow:true
+	}
+  };
+  var network = new vis.Network(container, data, options);
+  
+  
+  network.on("click", function (params) {
+        params.event = "[original event]";
+        document.getElementById('eventSpan').innerHTML = '<h2>Click event:</h2>' + JSON.stringify(params, null, 4);
+        console.log('click event, getNodeAt returns: ' + this.getNodeAt(params.pointer.DOM));
+    });
+  network.on("doubleClick", function (params) {
+        params.event = "[original event]";
+		var win = window.open(this.getNodeAt(params.pointer.DOM), '_blank');
+		win.focus();
+    });
+</script>
+
+
+</body>
+</html>
