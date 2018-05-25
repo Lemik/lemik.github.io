@@ -21,3 +21,11 @@ categories: en
 > Gavai is ossom. Every one what to get lade
 
 >Just burned 2,000 calories. That's the last time I leave brownies in the oven while I nap.
+
+>Daughter: "Mom, can I get a cat or a dog for Christmas, please?“
+Mom: "No honey, you will be getting a turkey, like every Christmas!"
+
+>A man sued an airline company after it lost his luggage. Sadly, he lost his case.
+
+>Why do seagulls fly over the sea? 
+Because if they flew over the bay they would be called bagels!
