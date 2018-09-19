@@ -25,14 +25,13 @@
 <input type="button" onclick="clusterByColor()" value="By Family Name "> <br />
 
 
-
 <div id="mynetwork"></div>
 <pre id="eventSpan"></pre>
 
 <script type="text/javascript">
 
 var DIR = 'img/indonesia/';
-  // 1 2 3 4 5 6 7 8 9 10 
+  // 1 2 3 4 5 6 7 8 9 10
   // create an array with nodes
   var nodes = new vis.DataSet([
     {id: 1, label: 'Irene Victoria Dushyn', group:'GenderF',shape: 'circularImage', image: DIR + '1.png'},
@@ -40,90 +39,90 @@ var DIR = 'img/indonesia/';
     {id: 3, label: 'Mariia Dushyna', group:'GenderF', shape: 'circularImage',cid: 0, image: DIR + '3.png'},
     {id: 4, label: 'Igor Dushyn', group:'GenderM', shape: 'circularImage',cid: 1, image: DIR + '2.png'},
     {id: 5, label: 'Natasha Peters', group:'GenderF', shape: 'circularImage', cid: 2, image: DIR + '4.png'},
-	{id: 6, label: 'Tomara Ivanova Dushyna \ Fedotuk', group:'GenderF', cid: 1, shape: 'circularImage', image: DIR + '2.png'},
-	{id: 7, label: 'Rene Dusnya', group:'GenderF', shape: 'circularImage', image: DIR + '2.png'},
-	{id: 8, label: 'Tomas Peters', group:'GenderM', shape: 'circularImage', cid: 3, image: DIR + '4.png'},
-	{id: 9, label: 'Karlova Evena', group:'GenderF', shape: 'circularImage', image: DIR + '3.png'},
-	{id: 10, label: 'Karlov Gleb', group:'GenderM', shape: 'circularImage', image: DIR + '3.png'},
-	
-	{id: 11, label: 'Victoriya Alekseevna Dushyna', group:'GenderF', shape: 'circularImage', image: DIR + '8.png'},
-	{id: 12, label: 'Olexey Olegovich Dushyn', group:'GenderM', shape: 'circularImage',FamilyName:'Dushyn',cid: 4, image: DIR + '8.png'},
-	{id: 13, label: 'Natalia Anatolevna Dushyna', group:'GenderF', shape: 'circularImage',FamilyName:'Dushyn',cid: 4, image: DIR + '5.png'},
-	
-	{id: 14, label: 'Alex Olegovich Dushyn', group:'GenderM', shape: 'circularImage',FamilyName:'Dushyn',cid: 5, image: DIR + '8.png'},
-	{id: 15, label: 'Natali Dushyna', group:'GenderF', shape: 'circularImage',FamilyName:'Dushyn',cid: 5, image: DIR + '8.png'},
-	
-	{id: 16, label: 'Oleg Leonidovich Dushyn', group:'GenderM', shape: 'circularImage', image: DIR + '8.png'},
-	{id: 17, label: 'Nina Vacilevna Dushyna', group:'GenderF', shape: 'circularImage', image: DIR + '6.png'},
-	
-	{id: 18, label: 'Leonid Olexeevich Dushyn', group:'GenderM', shape: 'circularImage', image: DIR + '8.png'},
-	{id: 19, label: 'Evgeniya Mihailovna Dushyna', group:'GenderF', shape: 'circularImage', image: DIR + '8.png'},
-	
-	{id: 20, label: 'Alexey Mihailovich Dushyn', group:'GenderM', shape: 'circularImage', image: DIR + '8.png'},
-	{id: 21, label: 'Lidia Dmitrievna Dushyna \ Azarova', group:'GenderF', shape: 'circularImage', image: DIR + '8.png'},
-	{id: 22, label: 'Evgeniy Olexeevich Dushyn', group:'GenderM', shape: 'circularImage', image: DIR + '9.png'},
-	{id: 23, label: 'Larisa Dushyna \ Cvetuhina', group:'GenderF', shape: 'circularImage', image: DIR + '9.png'},
-	{id: 24, label: 'Vladimir Evgen Dushyn', group:'GenderM', shape: 'circularImage', image: DIR + '9.png'},
-	
-	{id: 25, label: 'Mihail Afanasevich Kireev', group:'GenderM', shape: 'circularImage', image: DIR + '9.png'},
-	{id: 26, label: 'Matilda Yakovlevna Kireeva / Stepanova', group:'GenderF', shape: 'circularImage', image: DIR + '9.png'},
-	
-	{id: 27, label: 'Vasiliy Dmitrivich Mostovshikov', group:'GenderM', shape: 'circularImage', image: DIR + '6.png'},
-	{id: 28, label: 'Nataliya Porfirevna Mostenkova / Simonenko', group:'GenderF', shape: 'circularImage', image: DIR + '6.png'},
-	{id: 29, label: 'Vladimir Vasilevich Mostenkov', group:'GenderM', shape: 'circularImage', image: DIR + '6.png'},
-	
-	{id: 30, label: 'Nina Andreevna Ctruginenko / Toptigina', group:'GenderF', shape: 'circularImage', image: DIR + '5.png'},
-	{id: 31, label: 'Anatoliy Sergeevich Strigunenko', group:'GenderM', shape: 'circularImage', image: DIR + '5.png'},
-	{id: 32, label: 'Andrey Anatolevich Strigunenko', group:'GenderM', shape: 'circularImage', image: DIR + '5.png'},
-	
-	{id: 33, label: 'Valeriy Vasilevich Mironov', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
-	{id: 34, label: 'Irina Georgievna Mironova  / Mosyevna', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
-	
-	{id: 35, label: 'Georgiy Valervevich Mironov', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
-	{id: 36, label: 'Natasha Mironova \ ', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
-	{id: 37, label: 'Diana Mironova', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
-	
-	{id: 38, label: 'Evgeniya Ariadieva Rabinovich', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
-	{id: 39, label: 'Pese Ariadieva Rabinovich', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
-	{id: 40, label: 'Malke Ariadieva Rabinovich', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
-	{id: 41, label: 'Buze Ariadieva Rabinovich', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
-	{id: 42, label: 'Hane Ariadieva Rabinovich', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
-	{id: 43, label: 'Sheyda Ariadieva Rabinovich', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
-	{id: 44, label: 'Abe Yankeliv Robinovich', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
-	{id: 45, label: 'Ita Burehovna Rabinovich', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
-	
-	{id: 46, label: 'Georgiy Konstantinovich Moscevoi', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
-	{id: 47, label: 'Naum Konstantinovich Moscevoi', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
-	{id: 48, label: 'Evgeniy Konstantinovich Moscevoi', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
-	{id: 49, label: '... Konstantinovich Moscevoi', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
-	
-	{id: 50, label: 'Konstantinovich Moscevoi', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
-	{id: 51, label: '... Mosyevna', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
-	
-	{id: 52, label: 'Vasiliy Pavlovich Mironov', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
-	{id: 53, label: 'Anna Ivanova Mironova \ Moruova', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
-	
-	{id: 54, label: 'Ivan Fedotuk', group:'GenderM', shape: 'circularImage', image: DIR + '10.png'},
-	{id: 55, label: 'Irina Georgievna Fedotuk', group:'GenderF', shape: 'circularImage', image: DIR + '10.png'},
-	
-	{id: 56, label: 'Igor Ivanovich Fedotuk', group:'GenderM', shape: 'circularImage', image: DIR + '10.png'},
-	{id: 57, label: 'Alla Fedotuk', group:'GenderF', shape: 'circularImage', image: DIR + '10.png'},
-	{id: 58, label: 'Evgeniy Igorovich Fedotuk', group:'GenderM', shape: 'circularImage', image: DIR + '10.png'},
-	
-	{id: 59, label: 'Rudolf Frits Theodor Peters', group:'GenderM', shape: 'circularImage', image: DIR + '4.png'},
-	{id: 60, label: 'Iva Peters \ Eichholz ', group:'GenderF', shape: 'circularImage', image: DIR + '4.png'},
-	{id: 61, label: 'Christiane Strootmann \ Peters  ', group:'GenderF', shape: 'circularImage', image: DIR + '4.png'},
-	{id: 62, label: 'Warner Strootmann', group:'GenderM', shape: 'circularImage', image: DIR + '4.png'},
-	{id: 63, label: 'Florian Strootmann', group:'GenderM', shape: 'circularImage', image: DIR + '4.png'},
-	{id: 64, label: 'Mariur Strootmann', group:'GenderM', shape: 'circularImage', image: DIR + '4.png'},
-	{id: 65, label: 'Mareike Strootmann', group:'GenderF', shape: 'circularImage', image: DIR + '4.png'},
+	  {id: 6, label: 'Tomara Ivanova Dushyna \ Fedotuk', group:'GenderF', cid: 1, shape: 'circularImage', image: DIR + '2.png'},
+	  {id: 7, label: 'Rene Dusnya', group:'GenderF', shape: 'circularImage', image: DIR + '2.png'},
+	  {id: 8, label: 'Tomas Peters', group:'GenderM', shape: 'circularImage', cid: 3, image: DIR + '4.png'},
+	  {id: 9, label: 'Karlova Evena', group:'GenderF', shape: 'circularImage', image: DIR + '3.png'},
+	  {id: 10, label: 'Karlov Gleb', group:'GenderM', shape: 'circularImage', image: DIR + '3.png'},
+
+	  {id: 11, label: 'Victoriya Alekseevna Dushyna', group:'GenderF', shape: 'circularImage', image: DIR + '8.png'},
+	  {id: 12, label: 'Olexey Olegovich Dushyn', group:'GenderM', shape: 'circularImage',FamilyName:'Dushyn',cid: 4, image: DIR + '8.png'},
+  	{id: 13, label: 'Natalia Anatolevna Dushyna', group:'GenderF', shape: 'circularImage',FamilyName:'Dushyn',cid: 4, image: DIR + '5.png'},
+
+  	{id: 14, label: 'Alex Olegovich Dushyn', group:'GenderM', shape: 'circularImage',FamilyName:'Dushyn',cid: 5, image: DIR + '8.png'},
+  	{id: 15, label: 'Natali Dushyna', group:'GenderF', shape: 'circularImage',FamilyName:'Dushyn',cid: 5, image: DIR + '8.png'},
+
+  	{id: 16, label: 'Oleg Leonidovich Dushyn', group:'GenderM', shape: 'circularImage', image: DIR + '8.png'},
+  	{id: 17, label: 'Nina Vacilevna Dushyna', group:'GenderF', shape: 'circularImage', image: DIR + '6.png'},
+
+  	{id: 18, label: 'Leonid Olexeevich Dushyn', group:'GenderM', shape: 'circularImage', image: DIR + '8.png'},
+  	{id: 19, label: 'Evgeniya Mihailovna Dushyna', group:'GenderF', shape: 'circularImage', image: DIR + '8.png'},
+
+  	{id: 20, label: 'Alexey Mihailovich Dushyn', group:'GenderM', shape: 'circularImage', image: DIR + '8.png'},
+  	{id: 21, label: 'Lidia Dmitrievna Dushyna \ Azarova', group:'GenderF', shape: 'circularImage', image: DIR + '8.png'},
+  	{id: 22, label: 'Evgeniy Olexeevich Dushyn', group:'GenderM', shape: 'circularImage', image: DIR + '9.png'},
+  	{id: 23, label: 'Larisa Dushyna \ Cvetuhina', group:'GenderF', shape: 'circularImage', image: DIR + '9.png'},
+  	{id: 24, label: 'Vladimir Evgen Dushyn', group:'GenderM', shape: 'circularImage', image: DIR + '9.png'},
+
+  	{id: 25, label: 'Mihail Afanasevich Kireev', group:'GenderM', shape: 'circularImage', image: DIR + '9.png'},
+  	{id: 26, label: 'Matilda Yakovlevna Kireeva / Stepanova', group:'GenderF', shape: 'circularImage', image: DIR + '9.png'},
+
+  	{id: 27, label: 'Vasiliy Dmitrivich Mostovshikov', group:'GenderM', shape: 'circularImage', image: DIR + '6.png'},
+  	{id: 28, label: 'Nataliya Porfirevna Mostenkova / Simonenko', group:'GenderF', shape: 'circularImage', image: DIR + '6.png'},
+  	{id: 29, label: 'Vladimir Vasilevich Mostenkov', group:'GenderM', shape: 'circularImage', image: DIR + '6.png'},
+
+  	{id: 30, label: 'Nina Andreevna Ctruginenko / Toptigina', group:'GenderF', shape: 'circularImage', image: DIR + '5.png'},
+  	{id: 31, label: 'Anatoliy Sergeevich Strigunenko', group:'GenderM', shape: 'circularImage', image: DIR + '5.png'},
+  	{id: 32, label: 'Andrey Anatolevich Strigunenko', group:'GenderM', shape: 'circularImage', image: DIR + '5.png'},
+
+  	{id: 33, label: 'Valeriy Vasilevich Mironov', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 34, label: 'Irina Georgievna Mironova  / Mosyevna', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+
+  	{id: 35, label: 'Georgiy Valervevich Mironov', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 36, label: 'Natasha Mironova \ ', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 37, label: 'Diana Mironova', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+
+  	{id: 38, label: 'Evgeniya Ariadieva Rabinovich', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 39, label: 'Pese Ariadieva Rabinovich', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 40, label: 'Malke Ariadieva Rabinovich', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 41, label: 'Buze Ariadieva Rabinovich', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 42, label: 'Hane Ariadieva Rabinovich', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 43, label: 'Sheyda Ariadieva Rabinovich', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 44, label: 'Abe Yankeliv Robinovich', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 45, label: 'Ita Burehovna Rabinovich', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+
+  	{id: 46, label: 'Georgiy Konstantinovich Moscevoi', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 47, label: 'Naum Konstantinovich Moscevoi', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 48, label: 'Evgeniy Konstantinovich Moscevoi', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 49, label: '... Konstantinovich Moscevoi', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
+
+  	{id: 50, label: 'Konstantinovich Moscevoi', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 51, label: '... Mosyevna', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+
+  	{id: 52, label: 'Vasiliy Pavlovich Mironov', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 53, label: 'Anna Ivanova Mironova \ Moruova', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+
+  	{id: 54, label: 'Ivan Fedotuk', group:'GenderM', shape: 'circularImage', image: DIR + '10.png'},
+  	{id: 55, label: 'Irina Georgievna Fedotuk', group:'GenderF', shape: 'circularImage', image: DIR + '10.png'},
+
+  	{id: 56, label: 'Igor Ivanovich Fedotuk', group:'GenderM', shape: 'circularImage', image: DIR + '10.png'},
+  	{id: 57, label: 'Alla Fedotuk', group:'GenderF', shape: 'circularImage', image: DIR + '10.png'},
+  	{id: 58, label: 'Evgeniy Igorovich Fedotuk', group:'GenderM', shape: 'circularImage', image: DIR + '10.png'},
+
+  	{id: 59, label: 'Rudolf Frits Theodor Peters', group:'GenderM', shape: 'circularImage', image: DIR + '4.png'},
+  	{id: 60, label: 'Iva Peters \ Eichholz ', group:'GenderF', shape: 'circularImage', image: DIR + '4.png'},
+  	{id: 61, label: 'Christiane Strootmann \ Peters  ', group:'GenderF', shape: 'circularImage', image: DIR + '4.png'},
+  	{id: 62, label: 'Warner Strootmann', group:'GenderM', shape: 'circularImage', image: DIR + '4.png'},
+  	{id: 63, label: 'Florian Strootmann', group:'GenderM', shape: 'circularImage', image: DIR + '4.png'},
+  	{id: 64, label: 'Mariur Strootmann', group:'GenderM', shape: 'circularImage', image: DIR + '4.png'},
+  	{id: 65, label: 'Mareike Strootmann', group:'GenderF', shape: 'circularImage', image: DIR + '4.png'},
   ]);
 
   // create an array with edges
-  var edges = new vis.DataSet([
-//perants   
-    {from: 1 , to: 2 , arrows:'from', color:{color:'black'}, title:'daughter'}, {from: 1 , to: 3 , arrows:'from', color:{color:'black'},title:'daughter'},
-    {from: 2 , to: 4 , arrows:'from', color:{color:'black'}, title:'son'}     , {from: 2 , to: 5 , arrows:'from', color:{color:'black'},title:'son'},
+var edges = new vis.DataSet([
+   //perants
+  {from: 1 , to: 2 , arrows:'from', color:{color:'black'}, title:'daughter'}, {from: 1 , to: 3 , arrows:'from', color:{color:'black'},title:'daughter'},
+  {from: 2 , to: 4 , arrows:'from', color:{color:'black'}, title:'son'}     , {from: 2 , to: 5 , arrows:'from', color:{color:'black'},title:'son'},
 	{from: 7 , to: 4 , arrows:'from', color:{color:'black'}, title:'daughter'}, {from: 7 , to: 6 , arrows:'from', color:{color:'black'},title:'daughter'},
 	{from: 3 , to: 9 , arrows:'from', color:{color:'black'}, title:'daughter'}, {from: 10, to: 9 , arrows:'from', color:{color:'black'}, title:'son'},
 	{from: 11, to: 12, arrows:'from', color:{color:'black'}, title:'daughter'}, {from: 11, to: 13, arrows:'from', color:{color:'black'},title:'daughter'},
@@ -162,7 +161,7 @@ var DIR = 'img/indonesia/';
 	{from: 63, to: 61, arrows:'from', color:{color:'black'}, title:'son'}, 		{from: 63, to: 62, arrows:'from', color:{color:'black'},title:'son'},
 	{from: 64, to: 61, arrows:'from', color:{color:'black'}, title:'son'}, 		{from: 64, to: 62, arrows:'from', color:{color:'black'},title:'son'},
 	{from: 65, to: 61, arrows:'from', color:{color:'black'}, title:'daughter'}, {from: 65, to: 62, arrows:'from', color:{color:'black'},title:'daughter'},
-	
+
 	//marid
 	 {from: 2 , to: 3 , color:{color:'blue'}, title:'marid'},
 	 {from: 4 , to: 6 , color:{color:'blue'}, title:'marid'},
@@ -184,13 +183,11 @@ var DIR = 'img/indonesia/';
 	 {from: 54, to: 55, color:{color:'blue'}, title:'marid'},
 	 {from: 59, to: 60, color:{color:'blue'}, title:'marid'},
 	 {from: 61, to: 62, color:{color:'blue'}, title:'marid'},
- 
-//divorsed
+
+    //divorsed
 	{from: 4 , to: 5 , color:{color:'blue'},dashes:true, title:'diwarsed'},
 	{from: 22, to: 23, color:{color:'blue'},dashes:true, title:'diwarsed'},
 	{from: 56, to: 57, color:{color:'blue'},dashes:true, title:'diwarsed'},
-
-	
   ]);
 
   // create a network
@@ -200,7 +197,7 @@ var DIR = 'img/indonesia/';
     edges: edges
   };
   var options = {
-  
+
   groups: {
     GenderF: {color:{background:'pink', border:'pink'}, borderWidth:5},
 	GenderM: {color:{background:'DodgerBlue', border:'DodgerBlue'}, borderWidth:5},
@@ -228,7 +225,7 @@ var DIR = 'img/indonesia/';
     physics:false
   };
   var network = new vis.Network(container, data, options);
-  
+
   var network = new vis.Network(container, data, options);
   network.on("selectNode", function(params) {
       if (params.nodes.length == 1) {
@@ -237,7 +234,7 @@ var DIR = 'img/indonesia/';
           }
       }
   });
-  
+
   network.on("click", function (params) {
         params.event = "[original event]";
         document.getElementById('eventSpan').innerHTML = '<h2>Click event:</h2>' + JSON.stringify(params, null, 4);
@@ -248,7 +245,8 @@ var DIR = 'img/indonesia/';
 		var win = window.open(this.getNodeAt(params.pointer.DOM)+'.html', '_blank');
 		win.focus();
     });
-//clustering	
+
+  //clustering	
 	function clusterByHubsize() {
       network.setData(data);
       var clusterOptionsByData = {
@@ -273,11 +271,11 @@ var DIR = 'img/indonesia/';
               return childOptions.cid == i;
           },
           clusterNodeProperties: {id:'cidCluster'+i, borderWidth:3, shape:'database',label:FamilyName[i]}
-	  
+
       };
       network.cluster(clusterOptionsByData);
 	  }}
-	  
+
 	  function clusterByColor() {
       network.setData(data);
       var FamilyName = ['Dushyn', 'Dushyn', 'Peters', 'Dushyn', 'Dushyn'];
