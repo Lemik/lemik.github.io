@@ -34,3 +34,5 @@ Because if they flew over the bay they would be called bagels!
 Sure, like my son is going to marry someone twice his age...
 
 >Photographers are violent people: first they frame you. Then they shoot you. Then they hang you on the wall
+
+>I found a rock yesterday which measured 1760 yards in length. Must be some kind of milestone.
