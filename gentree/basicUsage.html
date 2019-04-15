@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+  <script type="text/javascript" src="dist/vis.js"></script>
+  <link href="dist/vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  Create a simple network with some nodes and edges. http://visjs.org/
+  https://github.com/almende/vis/issues/2355
+</p>
+<input type="button" onclick="clusterByHubsize()" value="Cluster by hubsize"> <br />
+<input type="button" onclick="clusterOutliers()" value="Cluster outliers"> <br />
+<input type="button" onclick="clusterByCid()" value="Cluster all nodes with CID = 1"> <br />
+<input type="button" onclick="clusterByColor()" value="By Family Name "> <br />
+
+
+<div id="mynetwork"></div>
+<pre id="eventSpan"></pre>
+
+<script type="text/javascript">
+
+var DIR = 'img/indonesia/';
+  // 1 2 3 4 5 6 7 8 9 10
+  // create an array with nodes
+  var nodes = new vis.DataSet([
+    {id: 1, label: 'Irene Victoria Dushyn', group:'GenderF',shape: 'circularImage', image: DIR + '1.png'},
+    {id: 2, label: 'Leonid Dushyn', group:'GenderM', shape: 'circularImage',cid: 0, image: DIR + '2.png'},
+    {id: 3, label: 'Mariia Dushyna', group:'GenderF', shape: 'circularImage',cid: 0, image: DIR + '3.png'},
+    {id: 4, label: 'Igor Dushyn', group:'GenderM', shape: 'circularImage',cid: 1, image: DIR + '2.png'},
+    {id: 5, label: 'Natasha Peters', group:'GenderF', shape: 'circularImage', cid: 2, image: DIR + '4.png'},
+	  {id: 6, label: 'Tomara Ivanova Dushyna \ Fedotuk', group:'GenderF', cid: 1, shape: 'circularImage', image: DIR + '2.png'},
+	  {id: 7, label: 'Rene Dusnya', group:'GenderF', shape: 'circularImage', image: DIR + '2.png'},
+	  {id: 8, label: 'Tomas Peters', group:'GenderM', shape: 'circularImage', cid: 3, image: DIR + '4.png'},
+	  {id: 9, label: 'Karlova Evena', group:'GenderF', shape: 'circularImage', image: DIR + '3.png'},
+	  {id: 10, label: 'Karlov Gleb', group:'GenderM', shape: 'circularImage', image: DIR + '3.png'},
+
+	  {id: 11, label: 'Victoriya Alekseevna Dushyna', group:'GenderF', shape: 'circularImage', image: DIR + '8.png'},
+	  {id: 12, label: 'Olexey Olegovich Dushyn', group:'GenderM', shape: 'circularImage',FamilyName:'Dushyn',cid: 4, image: DIR + '8.png'},
+  	{id: 13, label: 'Natalia Anatolevna Dushyna', group:'GenderF', shape: 'circularImage',FamilyName:'Dushyn',cid: 4, image: DIR + '5.png'},
+
+  	{id: 14, label: 'Alex Olegovich Dushyn', group:'GenderM', shape: 'circularImage',FamilyName:'Dushyn',cid: 5, image: DIR + '8.png'},
+  	{id: 15, label: 'Natali Dushyna', group:'GenderF', shape: 'circularImage',FamilyName:'Dushyn',cid: 5, image: DIR + '8.png'},
+
+  	{id: 16, label: 'Oleg Leonidovich Dushyn', group:'GenderM', shape: 'circularImage', image: DIR + '8.png'},
+  	{id: 17, label: 'Nina Vacilevna Dushyna', group:'GenderF', shape: 'circularImage', image: DIR + '6.png'},
+
+  	{id: 18, label: 'Leonid Olexeevich Dushyn', group:'GenderM', shape: 'circularImage', image: DIR + '8.png'},
+  	{id: 19, label: 'Evgeniya Mihailovna Dushyna', group:'GenderF', shape: 'circularImage', image: DIR + '8.png'},
+
+  	{id: 20, label: 'Alexey Mihailovich Dushyn', group:'GenderM', shape: 'circularImage', image: DIR + '8.png'},
+  	{id: 21, label: 'Lidia Dmitrievna Dushyna \ Azarova', group:'GenderF', shape: 'circularImage', image: DIR + '8.png'},
+  	{id: 22, label: 'Evgeniy Olexeevich Dushyn', group:'GenderM', shape: 'circularImage', image: DIR + '9.png'},
+  	{id: 23, label: 'Larisa Dushyna \ Cvetuhina', group:'GenderF', shape: 'circularImage', image: DIR + '9.png'},
+  	{id: 24, label: 'Vladimir Evgen Dushyn', group:'GenderM', shape: 'circularImage', image: DIR + '9.png'},
+
+  	{id: 25, label: 'Mihail Afanasevich Kireev', group:'GenderM', shape: 'circularImage', image: DIR + '9.png'},
+  	{id: 26, label: 'Matilda Yakovlevna Kireeva / Stepanova', group:'GenderF', shape: 'circularImage', image: DIR + '9.png'},
+
+  	{id: 27, label: 'Vasiliy Dmitrivich Mostovshikov', group:'GenderM', shape: 'circularImage', image: DIR + '6.png'},
+  	{id: 28, label: 'Nataliya Porfirevna Mostenkova / Simonenko', group:'GenderF', shape: 'circularImage', image: DIR + '6.png'},
+  	{id: 29, label: 'Vladimir Vasilevich Mostenkov', group:'GenderM', shape: 'circularImage', image: DIR + '6.png'},
+
+  	{id: 30, label: 'Nina Andreevna Ctruginenko / Toptigina', group:'GenderF', shape: 'circularImage', image: DIR + '5.png'},
+  	{id: 31, label: 'Anatoliy Sergeevich Strigunenko', group:'GenderM', shape: 'circularImage', image: DIR + '5.png'},
+  	{id: 32, label: 'Andrey Anatolevich Strigunenko', group:'GenderM', shape: 'circularImage', image: DIR + '5.png'},
+
+  	{id: 33, label: 'Valeriy Vasilevich Mironov', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 34, label: 'Irina Georgievna Mironova  / Mosyevna', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+
+  	{id: 35, label: 'Georgiy Valervevich Mironov', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 36, label: 'Natasha Mironova \ ', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 37, label: 'Diana Mironova', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+
+  	{id: 38, label: 'Evgeniya Ariadieva Rabinovich', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 39, label: 'Pese Ariadieva Rabinovich', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 40, label: 'Malke Ariadieva Rabinovich', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 41, label: 'Buze Ariadieva Rabinovich', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 42, label: 'Hane Ariadieva Rabinovich', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 43, label: 'Sheyda Ariadieva Rabinovich', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 44, label: 'Abe Yankeliv Robinovich', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 45, label: 'Ita Burehovna Rabinovich', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+
+  	{id: 46, label: 'Georgiy Konstantinovich Moscevoi', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 47, label: 'Naum Konstantinovich Moscevoi', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 48, label: 'Evgeniy Konstantinovich Moscevoi', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 49, label: '... Konstantinovich Moscevoi', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
+
+  	{id: 50, label: 'Konstantinovich Moscevoi', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 51, label: '... Mosyevna', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+
+  	{id: 52, label: 'Vasiliy Pavlovich Mironov', group:'GenderM', shape: 'circularImage', image: DIR + '7.png'},
+  	{id: 53, label: 'Anna Ivanova Mironova \ Moruova', group:'GenderF', shape: 'circularImage', image: DIR + '7.png'},
+
+  	{id: 54, label: 'Ivan Fedotuk', group:'GenderM', shape: 'circularImage', image: DIR + '10.png'},
+  	{id: 55, label: 'Irina Georgievna Fedotuk', group:'GenderF', shape: 'circularImage', image: DIR + '10.png'},
+
+  	{id: 56, label: 'Igor Ivanovich Fedotuk', group:'GenderM', shape: 'circularImage', image: DIR + '10.png'},
+  	{id: 57, label: 'Alla Fedotuk', group:'GenderF', shape: 'circularImage', image: DIR + '10.png'},
+  	{id: 58, label: 'Evgeniy Igorovich Fedotuk', group:'GenderM', shape: 'circularImage', image: DIR + '10.png'},
+
+  	{id: 59, label: 'Rudolf Frits Theodor Peters', group:'GenderM', shape: 'circularImage', image: DIR + '4.png'},
+  	{id: 60, label: 'Iva Peters \ Eichholz ', group:'GenderF', shape: 'circularImage', image: DIR + '4.png'},
+  	{id: 61, label: 'Christiane Strootmann \ Peters  ', group:'GenderF', shape: 'circularImage', image: DIR + '4.png'},
+  	{id: 62, label: 'Warner Strootmann', group:'GenderM', shape: 'circularImage', image: DIR + '4.png'},
+  	{id: 63, label: 'Florian Strootmann', group:'GenderM', shape: 'circularImage', image: DIR + '4.png'},
+  	{id: 64, label: 'Mariur Strootmann', group:'GenderM', shape: 'circularImage', image: DIR + '4.png'},
+  	{id: 65, label: 'Mareike Strootmann', group:'GenderF', shape: 'circularImage', image: DIR + '4.png'},
+  ]);
+
+  // create an array with edges
+var edges = new vis.DataSet([
+   //perants
+  {from: 1 , to: 2 , arrows:'from', color:{color:'black'}, title:'daughter'}, {from: 1 , to: 3 , arrows:'from', color:{color:'black'},title:'daughter'},
+  {from: 2 , to: 4 , arrows:'from', color:{color:'black'}, title:'son'}     , {from: 2 , to: 5 , arrows:'from', color:{color:'black'},title:'son'},
+	{from: 7 , to: 4 , arrows:'from', color:{color:'black'}, title:'daughter'}, {from: 7 , to: 6 , arrows:'from', color:{color:'black'},title:'daughter'},
+	{from: 3 , to: 9 , arrows:'from', color:{color:'black'}, title:'daughter'}, {from: 10, to: 9 , arrows:'from', color:{color:'black'}, title:'son'},
+	{from: 11, to: 12, arrows:'from', color:{color:'black'}, title:'daughter'}, {from: 11, to: 13, arrows:'from', color:{color:'black'},title:'daughter'},
+	{from: 12, to: 16, arrows:'from', color:{color:'black'}, title:'son'},	    {from: 12, to: 17, arrows:'from', color:{color:'black'},title:'son'},
+	{from: 14, to: 16, arrows:'from', color:{color:'black'}, title:'son'},		{from: 14, to: 17, arrows:'from', color:{color:'black'},title:'son'},
+	{from: 4 , to: 18, arrows:'from', color:{color:'black'}, title:'son'},		{from: 4 , to: 19, arrows:'from', color:{color:'black'},title:'son'},
+	{from: 16, to: 18, arrows:'from', color:{color:'black'}, title:'son'},		{from: 16, to: 19, arrows:'from', color:{color:'black'},title:'son'},
+	{from: 18, to: 20, arrows:'from', color:{color:'black'}, title:'son'},		{from: 18, to: 21, arrows:'from', color:{color:'black'},title:'son'},
+	{from: 22, to: 20, arrows:'from', color:{color:'black'}, title:'son'},		{from: 22, to: 21, arrows:'from', color:{color:'black'},title:'son'},
+	{from: 24, to: 22, arrows:'from', color:{color:'black'}, title:'son'},		{from: 24, to: 23, arrows:'from', color:{color:'black'},title:'son'},
+	{from: 19, to: 25, arrows:'from', color:{color:'black'}, title:'daughter'}, {from: 19, to: 26, arrows:'from', color:{color:'black'},title:'daughter'},
+	{from: 29, to: 27, arrows:'from', color:{color:'black'}, title:'son'},		{from: 29, to: 28, arrows:'from', color:{color:'black'},title:'son'},
+	{from: 17, to: 27, arrows:'from', color:{color:'black'}, title:'daughter'}, {from: 17, to: 28, arrows:'from', color:{color:'black'},title:'daughter'},
+	{from: 13, to: 30, arrows:'from', color:{color:'black'}, title:'daughter'}, {from: 13, to: 31, arrows:'from', color:{color:'black'},title:'daughter'},
+	{from: 32, to: 30, arrows:'from', color:{color:'black'}, title:'son'}     , {from: 32, to: 31, arrows:'from', color:{color:'black'},title:'son'},
+	{from: 5 , to: 33, arrows:'from', color:{color:'black'}, title:'daughter'}, {from: 5 , to: 34, arrows:'from', color:{color:'black'},title:'daughter'},
+	{from: 35, to: 33, arrows:'from', color:{color:'black'}, title:'son'}     , {from: 35, to: 34, arrows:'from', color:{color:'black'},title:'son'},
+	{from: 37, to: 35, arrows:'from', color:{color:'black'}, title:'daughter'}, {from: 37, to: 36, arrows:'from', color:{color:'black'},title:'daughter'},
+	{from: 38, to: 44, arrows:'from', color:{color:'black'}, title:'daughter'}, {from: 38, to: 45, arrows:'from', color:{color:'black'},title:'daughter'},
+	{from: 39, to: 44, arrows:'from', color:{color:'black'}, title:'daughter'}, {from: 39, to: 45, arrows:'from', color:{color:'black'},title:'daughter'},
+	{from: 40, to: 44, arrows:'from', color:{color:'black'}, title:'daughter'}, {from: 40, to: 45, arrows:'from', color:{color:'black'},title:'daughter'},
+	{from: 41, to: 44, arrows:'from', color:{color:'black'}, title:'daughter'}, {from: 41, to: 45, arrows:'from', color:{color:'black'},title:'daughter'},
+	{from: 42, to: 44, arrows:'from', color:{color:'black'}, title:'daughter'}, {from: 42, to: 45, arrows:'from', color:{color:'black'},title:'daughter'},
+	{from: 43, to: 44, arrows:'from', color:{color:'black'}, title:'daughter'}, {from: 43, to: 45, arrows:'from', color:{color:'black'},title:'daughter'},
+	{from: 34, to: 46, arrows:'from', color:{color:'black'}, title:'daughter'}, {from: 34, to: 38, arrows:'from', color:{color:'black'},title:'daughter'},
+	{from: 46, to: 50, arrows:'from', color:{color:'black'}, title:'son'}     , {from: 46, to: 51, arrows:'from', color:{color:'black'},title:'son'},
+	{from: 47, to: 50, arrows:'from', color:{color:'black'}, title:'son'}     , {from: 47, to: 51, arrows:'from', color:{color:'black'},title:'son'},
+	{from: 48, to: 50, arrows:'from', color:{color:'black'}, title:'son'}     , {from: 48, to: 51, arrows:'from', color:{color:'black'},title:'son'},
+	{from: 49, to: 50, arrows:'from', color:{color:'black'}, title:'son'}     , {from: 49, to: 51, arrows:'from', color:{color:'black'},title:'son'},
+	{from: 33, to: 52, arrows:'from', color:{color:'black'}, title:'son'}     , {from: 33, to: 53, arrows:'from', color:{color:'black'},title:'son'},
+	{from: 6 , to: 54, arrows:'from', color:{color:'black'}, title:'daughter'}, {from: 6 , to: 55, arrows:'from', color:{color:'black'},title:'daughter'},
+	{from: 56, to: 54, arrows:'from', color:{color:'black'}, title:'son'}, 		{from: 56, to: 55, arrows:'from', color:{color:'black'},title:'son'},
+	{from: 58, to: 56, arrows:'from', color:{color:'black'}, title:'son'}, 		{from: 58, to: 57, arrows:'from', color:{color:'black'},title:'son'},
+	{from: 8 , to: 59, arrows:'from', color:{color:'black'}, title:'son'}, 		{from: 8 , to: 60, arrows:'from', color:{color:'black'},title:'son'},
+	{from: 61, to: 59, arrows:'from', color:{color:'black'}, title:'daughter'},	{from: 61, to: 60, arrows:'from', color:{color:'black'},title:'daughter'},
+	{from: 63, to: 61, arrows:'from', color:{color:'black'}, title:'son'}, 		{from: 63, to: 62, arrows:'from', color:{color:'black'},title:'son'},
+	{from: 64, to: 61, arrows:'from', color:{color:'black'}, title:'son'}, 		{from: 64, to: 62, arrows:'from', color:{color:'black'},title:'son'},
+	{from: 65, to: 61, arrows:'from', color:{color:'black'}, title:'daughter'}, {from: 65, to: 62, arrows:'from', color:{color:'black'},title:'daughter'},
+
+	//marid
+	 {from: 2 , to: 3 , color:{color:'blue'}, title:'marid'},
+	 {from: 4 , to: 6 , color:{color:'blue'}, title:'marid'},
+	 {from: 5 , to: 8 , color:{color:'blue'}, title:'marid'},
+	 {from: 12, to: 13, color:{color:'blue'}, title:'marid'},
+	 {from: 14, to: 15, color:{color:'blue'}, title:'marid'},
+	 {from: 16, to: 17, color:{color:'blue'}, title:'marid'},
+	 {from: 18, to: 19, color:{color:'blue'}, title:'marid'},
+	 {from: 20, to: 21, color:{color:'blue'}, title:'marid'},
+	 {from: 25, to: 26, color:{color:'blue'}, title:'marid'},
+	 {from: 27, to: 28, color:{color:'blue'}, title:'marid'},
+	 {from: 30, to: 31, color:{color:'blue'}, title:'marid'},
+	 {from: 33, to: 34, color:{color:'blue'}, title:'marid'},
+	 {from: 35, to: 36, color:{color:'blue'}, title:'marid'},
+	 {from: 44, to: 45, color:{color:'blue'}, title:'marid'},
+	 {from: 46, to: 38, color:{color:'blue'}, title:'marid'},
+	 {from: 50, to: 51, color:{color:'blue'}, title:'marid'},
+	 {from: 52, to: 53, color:{color:'blue'}, title:'marid'},
+	 {from: 54, to: 55, color:{color:'blue'}, title:'marid'},
+	 {from: 59, to: 60, color:{color:'blue'}, title:'marid'},
+	 {from: 61, to: 62, color:{color:'blue'}, title:'marid'},
+
+    //divorsed
+	{from: 4 , to: 5 , color:{color:'blue'},dashes:true, title:'diwarsed'},
+	{from: 22, to: 23, color:{color:'blue'},dashes:true, title:'diwarsed'},
+	{from: 56, to: 57, color:{color:'blue'},dashes:true, title:'diwarsed'},
+  ]);
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+
+  groups: {
+    GenderF: {color:{background:'pink', border:'pink'}, borderWidth:5},
+	GenderM: {color:{background:'DodgerBlue', border:'DodgerBlue'}, borderWidth:5},
+	B:{color:{color:'red'}, borderWidth:5}
+  },
+  nodes: {
+ // physics: false,
+  shadow:true
+  },
+  edges: {
+          smooth: {
+                      type: 'cubicBezier',
+                      forceDirection: 'vertical',
+                      roundness: 1
+                    },
+    shadow:true
+	},
+   layout: {
+                  //  hierarchical: {
+                  //    direction: 'DU',
+                    //  nodeSpacing: 150
+                  //  }
+                  },
+    interaction: {dragNodes :true},
+    physics:false
+  };
+  var network = new vis.Network(container, data, options);
+
+  var network = new vis.Network(container, data, options);
+  network.on("selectNode", function(params) {
+      if (params.nodes.length == 1) {
+          if (network.isCluster(params.nodes[0]) == true) {
+              network.openCluster(params.nodes[0]);
+          }
+      }
+  });
+
+  network.on("click", function (params) {
+        params.event = "[original event]";
+        document.getElementById('eventSpan').innerHTML = '<h2>Click event:</h2>' + JSON.stringify(params, null, 4);
+        console.log('click event, getNodeAt returns: ' + this.getNodeAt(params.pointer.DOM));
+    });
+  network.on("doubleClick", function (params) {
+        params.event = "[original event]";
+		var win = window.open(this.getNodeAt(params.pointer.DOM)+'.html', '_blank');
+		win.focus();
+    });
+
+  //clustering	
+	function clusterByHubsize() {
+      network.setData(data);
+      var clusterOptionsByData = {
+          processProperties: function(clusterOptions, childNodes) {
+            clusterOptions.label = "[" + childNodes.length + "]";
+            return clusterOptions;
+          },
+          clusterNodeProperties: {borderWidth:3, shape:'box', font:{size:30}}
+      };
+      network.clusterByHubsize(undefined, clusterOptionsByData);
+  }
+  function clusterOutliers() {
+      network.setData(data);
+      network.clusterOutliers();
+  }
+   function clusterByCid() {
+      network.setData(data);
+	  var FamilyName = ['Dushyn', 'Dushyn', 'Peters', 'Dushyn', 'Dushyn'];
+	  for (var i = 0; i < 5; i++) {
+      var clusterOptionsByData = {
+	    joinCondition:function(childOptions) {
+              return childOptions.cid == i;
+          },
+          clusterNodeProperties: {id:'cidCluster'+i, borderWidth:3, shape:'database',label:FamilyName[i]}
+
+      };
+      network.cluster(clusterOptionsByData);
+	  }}
+
+	  function clusterByColor() {
+      network.setData(data);
+      var FamilyName = ['Dushyn', 'Dushyn', 'Peters', 'Dushyn', 'Dushyn'];
+      var clusterOptionsByData;
+      for (var i = 0; i < FamilyName.length; i++) {
+          var FamilyName = FamilyName[i];
+          clusterOptionsByData = {
+              joinCondition: function (childOptions) {
+                  return childOptions.FamilyName == FamilyName; // the color is fully defined in the node.
+              },
+              processProperties: function (clusterOptions, childNodes, childEdges) {
+                  var totalMass = 0;
+                  for (var i = 0; i < childNodes.length; i++) {
+                      totalMass += childNodes[i].mass;
+                  }
+                  clusterOptions.mass = totalMass;
+                  return clusterOptions;
+              },
+              clusterNodeProperties: {id: FamilyName, borderWidth: 3, shape: 'database', label:FamilyName}
+          };
+          network.cluster(clusterOptionsByData);
+      }
+  }
+</script>
+
+
+</body>
+</html>
