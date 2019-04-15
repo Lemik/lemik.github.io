@@ -16,8 +16,8 @@ baseurl: ""
 #url: "http://lemik.github.io" # the base hostname & protocol for your site
 url: "http://Dushyn.com"
 # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+#twitter_username: jekyllrb
+github_username:  Lemik
 
 # Build settings
 markdown: kramdown
