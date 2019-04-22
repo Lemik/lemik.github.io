@@ -1,4 +1,24 @@
----
-layout: default
----
-    {{ content }}
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    {% include header.html %}
+    <div class="containerImg">
+        {{ content }}
+
+    {% include comments.html %}   
+    </div>
+    {% include footer.html %}
+    {% include js.html %}
+    <!--Google Analitics-->
+    {% if jekyll.environment == 'production' %}
+    {% include analytics.html %}
+    {% endif %}
+ </body>
+</html>
