@@ -148,3 +148,7 @@ _И вообщем хватит ныть;) сижу в прохладном ав
 ## July 31.
 _Surprise! But Canadian guys over 35-40 don't give a shit seeing you 8month pregnant on a sky train. They hide their eyes from you ignoring and pretending that they have something so urgent on the phone that at least will save the world today. Poor guys. When I get a seat proposed by a guy, it is 90 % will be a an immigrant like myself or a young dude. Today I was starring on a man expecting him to lift up his ass, but he looked at me scared and hid his look in a phone._
 _So I often ask girls. Or young man, they are good in noticing me)) I came to a conclusion that most probably it was an education system gap when no one taught these guys any of the etiquette._
+
+
+[<<--- Предыдушая часть]({% post_url ru/как%20я%20стал%20отцом/2017-05-05-how-i-become-a-father %})
+[Читать дальше --->>]({% post_url ru/как%20я%20стал%20отцом/2017-08-01-how-i-become-a-father %})

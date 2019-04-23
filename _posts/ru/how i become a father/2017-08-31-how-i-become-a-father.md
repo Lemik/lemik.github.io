@@ -64,3 +64,5 @@ categories: [ru, Как я стал отцом]
 Про больницу можно написать отдельную статью, если на то будет время. А сейчас у меня новый план. Я начинаю видео блог Бегающий Отец. Где попробую рассказать про подготовку к половинке Ironman и первый год отцовства.
 
 <iframe width="840" height="420" src="https://www.youtube.com/embed/2eKysWCDXws" frameborder="0" allowfullscreen="true"> </iframe>
+
+[<<--- Предыдушая часть]({% post_url ru/как%20я%20стал%20отцом/2017-08-23-how-i-become-a-father %})
