@@ -3,7 +3,7 @@ layout: post
 version: 1
 title:  "Born a crime"
 date: 2019-04-28
-published: false
+published: true
 image: images/posts/books/born-a-crime.jpg
 excerpt_separator: <!-- excerpt -->
 comments: true
