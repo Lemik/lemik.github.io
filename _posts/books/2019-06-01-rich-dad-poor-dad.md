@@ -1,7 +1,7 @@
 ---
 layout: post
 version: 1
-title:  "rich dad poor dad"
+title:  "Rich Dad Poor Dad"
 date: 2019-06-01
 published: true
 image: images/posts/books/rich-dad-poor-dad.jpg
