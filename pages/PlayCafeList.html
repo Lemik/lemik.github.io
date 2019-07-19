@@ -22,13 +22,18 @@ comments: true
 	<thead>
 		<tr>
       <th data-field="Location" data-sortable="true" data-filter-control="select" scope="col">Location</th>
-      <th data-field="name" data-sortable="true"  data-filter-control="input" scope="col" data-href="link">Title</th>
+      <th data-field="name" data-formatter="nameFormatter" data-sortable="true"  data-filter-control="input" scope="col">Title</th>
       <th data-field="Time" data-sortable="true"  data-filter-control="input" scope="col">Time</th>
       <th data-field="Price" data-sortable="true" data-filter-control="input" scope="col">Price</th>
-      <th data-field="Age" data-sortable="true" data-filter-control="select" scope="col">Age</th>
+      <th data-field="Age" data-sortable="true" data-filter-control="select" scope="col">Age</th>   
     </tr>
 	</thead> 
 </table>
+<script>function nameFormatter(value, row, index) {
+    return "<a href = \"" + row.link + "\">" + value ;
+}
+</script>
+
 <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
     Information about the map below.
 </button>
