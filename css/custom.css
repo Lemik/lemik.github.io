@@ -11,3 +11,29 @@
 	height: 800px;
 	width: 100%;
 }
+
+/* Blueimp borderless lightbox: use full viewport; stable height on mobile toolbars */
+.blueimp-gallery {
+	min-height: 100vh;
+	min-height: 100dvh;
+}
+.blueimp-gallery > .close {
+	top: max(15px, env(safe-area-inset-top, 0px));
+	right: max(15px, env(safe-area-inset-right, 0px));
+}
+.blueimp-gallery > .title {
+	left: max(15px, env(safe-area-inset-left, 0px));
+	top: max(15px, env(safe-area-inset-top, 0px));
+	margin-right: max(40px, env(safe-area-inset-right, 0px));
+}
+.blueimp-gallery > .prev {
+	left: max(15px, env(safe-area-inset-left, 0px));
+}
+.blueimp-gallery > .next {
+	right: max(15px, env(safe-area-inset-right, 0px));
+}
+.blueimp-gallery > .indicator {
+	bottom: max(15px, env(safe-area-inset-bottom, 0px));
+	left: max(15px, env(safe-area-inset-left, 0px));
+	right: max(15px, env(safe-area-inset-right, 0px));
+}

@@ -28,7 +28,8 @@
   'use strict'
 
   $.extend(Gallery.prototype.options, {
-    useBootstrapModal: true
+    // Borderless lightbox fills the viewport (better for photos on desktop and mobile).
+    useBootstrapModal: false
   })
 
   var close = Gallery.prototype.close
