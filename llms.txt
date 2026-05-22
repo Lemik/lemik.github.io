@@ -1,0 +1,21 @@
+---
+layout: null
+---
+# {{ site.title }}
+
+> {{ site.description | strip }}
+
+## Sections
+
+- Blog (grid): {{ "/blog-Grid.html" | absolute_url }}
+- Blog (list): {{ "/blog.html" | absolute_url }}
+- Projects: {{ "/projects.html" | absolute_url }}
+- Photos: {{ "/photos.html" | absolute_url }}
+- Posts on a map: {{ "/map.html" | absolute_url }}
+- Resume: {{ "/resume.html" | absolute_url }}
+- RSS: {{ "/feed.xml" | absolute_url }}
+- Sitemap: {{ "/sitemap.xml" | absolute_url }}
+
+## Technical
+
+Static site generated with Jekyll. Canonical site URL for citation: {{ site.url | strip }}.

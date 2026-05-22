@@ -37,3 +37,127 @@
 	left: max(15px, env(safe-area-inset-left, 0px));
 	right: max(15px, env(safe-area-inset-right, 0px));
 }
+
+/* —— Projects page (scoped) —— */
+
+.projects-page {
+	padding-bottom: 5rem;
+	/* Bump base scale so card copy reads larger than global body */
+	font-size: 1.28rem;
+}
+
+.projects-page__header {
+	margin-bottom: 2rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.projects-page__title {
+	margin: 0 0 0.35rem;
+	font-size: clamp(2.35rem, 5.5vw, 3.2rem);
+	font-weight: 600;
+	color: #333;
+}
+
+.projects-page__intro {
+	margin: 0;
+	font-size: 1.45rem;
+	color: #666;
+	line-height: 1.55;
+}
+
+.project-cards-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 1.65rem;
+	align-items: stretch;
+}
+
+@media (min-width: 992px) {
+	.project-cards-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+/* Entire card is one link (<a.project-card>) */
+a.project-card,
+a.project-card:visited {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100%;
+	padding: 2.1rem 2rem 1.85rem;
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	border-radius: 12px;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+	transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+a.project-card:hover {
+	box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+	transform: translateY(-2px);
+	border-color: rgba(61, 143, 209, 0.35);
+}
+
+a.project-card:focus {
+	outline: none;
+}
+
+a.project-card:focus-visible {
+	outline: 3px solid #3d8fd1;
+	outline-offset: 3px;
+	box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+	border-color: rgba(61, 143, 209, 0.5);
+}
+
+a.project-card:hover .project-card__title,
+a.project-card:focus-visible .project-card__title {
+	color: #1a4971;
+}
+
+.project-card__title {
+	margin: 0 0 1rem;
+	font-size: 1.95rem;
+	font-weight: 600;
+	line-height: 1.28;
+	color: #2c5282;
+	transition: color 0.15s ease;
+}
+
+.project-card__desc {
+	flex-grow: 1;
+	margin: 0 0 1.35rem;
+	font-size: 1.325rem;
+	line-height: 1.58;
+	color: #444;
+}
+
+.project-card__cta {
+	align-self: flex-start;
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: #3d8fd1;
+}
+
+@media (max-width: 767px) {
+	.projects-page {
+		font-size: 1.18rem;
+	}
+
+	.projects-page__title {
+		font-size: 2.2rem;
+	}
+
+	a.project-card {
+		padding: 1.55rem;
+	}
+
+	a.project-card:hover {
+		transform: none;
+	}
+}

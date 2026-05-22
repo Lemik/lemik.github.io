@@ -1,8 +1,10 @@
-    <title></title>
+    <meta charset="utf-8">
+    {% seo %}
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <!-- RSS Feed-->
-	<link rel="alternate" type="application/rss+xml" title="Blog of Leonid Dushyn" href="{{ site.baseurl }}/feed.xml" >
-	
+	<link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | absolute_url }}" >
+
     <!-- Favicon -->
     <link href="{{ site.baseurl }}/images/LD.ico" rel="shortcut icon">
 
@@ -24,5 +26,3 @@
 	<!-- Shareaholic script
 	<script type="text/javascript" data-cfasync="false" src="//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js" data-shr-siteid="2e879512814c6e4169a79a14899ff1f9" async="async"></script>
     -->
-
-	

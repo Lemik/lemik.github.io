@@ -8,19 +8,37 @@
 # Site settings
 title: Blog of Leonid Dushin
 email: leonid.dushin@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  This is personal blog of Leonid Dushin. I would like to share my experianse, 
-  feelings and thoughts.
+description: >
+  Personal blog by Leonid Dushin — travel, hiking, books, family, photography,
+  and side projects. Bilingual (English and Russian) posts.
+lang: en
+locale: en_US
+# Short phrase for homepage <title>; full site.description stays for meta/OG/snippet text
+tagline: Travel, hikes, books, family, photography
 baseurl: ""
-# the subpath of your site, e.g. /blog
-#url: "http://lemik.github.io" # the base hostname & protocol for your site
-url: "http://Dushyn.com"
-# the base hostname & protocol for your site
-#twitter_username: jekyllrb
-github_username:  Lemik
+# Canonical site URL (HTTPS) — used for absolute links, Open Graph, and JSON-LD
+url: "https://dushyn.com"
+
+author:
+  name: Leonid Dushin
+  email: leonid.dushin@gmail.com
+
+social:
+  links:
+    - https://github.com/Lemik
+
+github_username: Lemik
 
 # Build settings
 markdown: kramdown
 
+plugins:
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /images/LD.png
 
 googleAnalitycsID: UA-58426023-1
